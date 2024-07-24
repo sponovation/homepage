@@ -1,3 +1,4 @@
+
 ///
 /// Solid State by HTML5 UP
 /// html5up.net | @ajlkn
@@ -8,20 +9,6 @@
 
 	/// Sets the colors of the wrapper's top/bottom edges.
 	/// @param {string} $color Color.
-	@mixin wrapper-edges-color($color: black) {
-		&:before, &:after {
-			background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,100 100,0 100,100" style="fill:#{$color};" /></svg>');
-		}
-
-		&:before {
-			box-shadow: inset 0 -1px 0 0 $color, 0 1px 0 0 $color;
-		}
-
-		&:after {
-			box-shadow: inset 0 -1px 0 0 $color, 0 1px 0 0 $color;
-		}
-	}
-
 	#wrapper {
 		> header {
 			@include padding(7.5em, 0, (3.5em, 0, _size(wrapper-edges, large) * -0.5, 0));
@@ -107,30 +94,7 @@
 
 	.wrapper {
 		background-color: _palette(bg);
-		margin: _size(wrapper-edges, large) 0;
 		position: relative;
-		@include wrapper-edges-color(_palette(bg));
-
-		&:before, &:after {
-			background-repeat: no-repeat;
-			background-size: 100% 100%;
-			content: '';
-			display: block;
-			height: _size(wrapper-edges, large);
-			position: absolute;
-			width: 100%;
-		}
-
-		&:before {
-			left: 0;
-			top: (_size(wrapper-edges, large) * -1);
-		}
-
-		&:after {
-			@include vendor('transform', 'scaleY(-1)');
-			bottom: (_size(wrapper-edges, large) * -1);
-			left: 0;
-		}
 
 		&.alt {
 			&:before {
@@ -148,19 +112,12 @@
 			width: _size(inner);
 		}
 
-		@for $i from 2 through _misc(max-wrapper-styles) {
-			$j: 3 * ($i - 1);
-			$color: desaturate(lighten(_palette(bg), $j), $j * 0.5);
-
-			&.style#{$i} {
-				background-color: $color;
-				@include wrapper-edges-color($color);
-			}
-		}
-
 		&.spotlight {
-			@include wrapper-edges-color(_palette(accent));
-			background-color: _palette(accent);
+			background-color: #FFF;
+			
+			h2, a {
+				color: _palette(blue);
+			}
 
 			.inner {
 				@include vendor('display', 'flex');
@@ -186,31 +143,20 @@
 				-ms-flex: 2;
 			}
 
-			&:nth-child(2n - 1) {
-				.inner {
-					@include vendor('flex-direction', 'row-reverse');
-					text-align: right;
-				}
-
-				.image {
-					margin: 0 0 _size(element-margin) _size(section-spacing, large);
-				}
-			}
-
 			@for $i from 2 through _misc(max-wrapper-styles) {
-				$j: 3 * ($i - 1);
-				$color: saturate(darken(_palette(accent), $j), $j * 0.5);
+				// 홀수와 짝수에 따라 다른 배경색을 설정
+				$color: #FFF;
+				@if $i % 2 == 0 { // 짝수인 경우
+					$color: #F1F8FF;
+				}
 
 				&.style#{$i} {
 					background-color: $color;
-					@include wrapper-edges-color($color);
 				}
 			}
 		}
 
 		@include breakpoint('<=medium') {
-			margin: _size(wrapper-edges, medium) 0;
-
 			&:before, &:after {
 				height: _size(wrapper-edges, medium);
 			}
@@ -244,8 +190,6 @@
 		}
 
 		@include breakpoint('<=small') {
-			margin: _size(wrapper-edges, small) 0;
-
 			&:before, &:after {
 				height: _size(wrapper-edges, small);
 			}

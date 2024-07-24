@@ -46,12 +46,24 @@
 // Palette.
 	$palette: (
 		bg:						#2e3141,
-		fg:						#000,
+		fg:						#000000,
 		fg-bold:				#ffffff,
-		fg-light:				rgba(255,255,255,0.35),
+		fg-light:				rgba(1, 1, 1, 0.35),
 		border:					rgba(255,255,255,0.125),
 		border-bg:				rgba(255,255,255,0.025),
 		border2:				rgba(255,255,255,0.25),
 		border2-bg:				rgba(255,255,255,0.075),
-		accent:					#2B2E83
+		accent:					#2B2E83,
+		// 추가
+		blue:					#2B2E83,
+		black: 					#000000,
+		white: 					#FFFFFF,
+		light-blue: 					#1C64D1, 
+		blue-linear: 			linear-gradient(90deg, #00C2FF 0%, #5256CD 100%),
+		bg-linear:				linear-gradient(180deg, #FFF 0%, #ECF6FF 77.5%),
+
+
+
+
+
 	);

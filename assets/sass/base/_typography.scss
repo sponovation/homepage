@@ -5,32 +5,50 @@
 ///
 
 /* Type */
+	html {
+		font-size: 24px; /* 기본 설정: 1rem = 16px */
+	}
 
 	body, input, select, textarea {
-		color: _palette(fg);
+		color: _palette(black);
 		font-family: _font(family);
-		font-size: 16.5pt;
+		font-size: 16px;
 		font-weight: _font(weight);
 		line-height: 1.65;
 
 		@include breakpoint('<=xlarge') {
-			font-size: 13pt;
+			font-size: 15pt;
+			html {
+				font-size: 15px; /* 기본 설정: 1rem = 16px */
+			}
 		}
 
 		@include breakpoint('<=large') {
-			font-size: 12pt;
+			font-size: 15pt;
+			html {
+				font-size: 15px; /* 기본 설정: 1rem = 16px */
+			}
 		}
 
 		@include breakpoint('<=medium') {
-			font-size: 12pt;
+			font-size: 15pt;
+			html {
+				font-size: 15px; /* 기본 설정: 1rem = 16px */
+			}
 		}
 
 		@include breakpoint('<=small') {
-			font-size: 12pt;
+			font-size: 15pt;
+			html {
+				font-size: 15px; /* 기본 설정: 1rem = 16px */
+			}
 		}
 
 		@include breakpoint('<=xsmall') {
-			font-size: 12pt;
+			font-size: 15pt;
+			html {
+				font-size: 15px; /* 기본 설정: 1rem = 16px */
+			}
 		}
 	}
 
@@ -46,21 +64,22 @@
 		}
 
 		&.special:not(.button) {
-			@include icon(false, solid);
 			border-bottom: 0;
 			display: block;
 			font-family: _font(family-heading);
 			font-size: 0.8em;
-			font-weight: _font(weight-heading-bold);
-			letter-spacing: _font(kern-heading);
+			font-weight: _font(weight-extra-bold);
 			margin: 0 0 _size(element-margin) 0;
 			text-transform: uppercase;
 
 			&:before {
 				@include vendor('transition', 'background-color #{_duration(transition)} ease-in-out');
+				background: url('images/icon/circle.svg') no-repeat center;; // 이미지 경로 설정
+    			background-size: cover; // 이미지 크기 조절
+    			background-repeat: no-repeat; // 이미지 반복 방지
 				border-radius: 100%;
 				border: solid 2px _palette(border);
-				content: '\f105';
+				content: '';
 				display: inline-block;
 				font-size: 1.25em;
 				height: 2em;
@@ -101,10 +120,10 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		color: _palette(fg-bold);
+		font-size: 4.375rem;
 		font-family: _font(family-heading);
-		font-weight: _font(weight-heading-bold);
-		letter-spacing: _font(kern-heading);
-		margin: 0 0 (_size(element-margin) * 0.5) 0;
+		font-weight: _font(weight-extra-bold);
+		font-style: normal;
 		text-transform: uppercase;
 
 		a {
@@ -114,12 +133,22 @@
 		}
 
 		span {
-			font-weight: _font(weight-heading);
+			color: _palette(blue);
+			font-weight: _font(weight-extra-bold);
 		}
 
+
 		&.major {
-			padding-bottom: 1em;
 			border-bottom: solid 2px _palette(border);
+		}
+
+		&.major.title {
+			padding-bottom: 67px;
+			color: _palette(blue);
+			font-size: 70px;
+			font-style: normal;
+			font-weight: 800;
+			line-height: 87px; /* 124.286% */
 		}
 	}
 
@@ -216,4 +245,13 @@
 
 	.align-right {
 		text-align: right;
+	}
+
+	span.additional {
+		color: #000;
+		font-size: 1.875rem;
+		font-style: normal;
+		font-weight: _font(weight-extra-bold);
+		line-height: normal;
+		letter-spacing: -0.0375rem;
 	}
