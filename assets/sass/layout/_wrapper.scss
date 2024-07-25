@@ -105,8 +105,12 @@
 		}
 	}
 
-	.wrapper {
+	.wrapper.linear {
 		background: linear-gradient(180deg, #FFF 0%, #ECF6FF 77.5%);
+	}
+
+	.wrapper {
+		background-color: _palette(bg);
 		position: relative;
 
 		&.alt {
