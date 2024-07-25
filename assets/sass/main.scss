@@ -18,11 +18,11 @@
 
 	@include breakpoints((
 		xlarge:    (1281px,   1680px   ),
-		large:     (981px,    1280px   ),
-		medium:    (737px,    980px    ),
-		small:     (481px,    736px    ),
-		xsmall:    (361px,    480px    ),
-		xxsmall:   (null,     360px    )
+		large:     (981px,    1280px   ), 
+		medium:    (737px,    980px    ), 
+		small:     (481px,    736px    ), // 태블릿
+		xsmall:    (361px,    480px    ), // 모바일 가로
+		xxsmall:   (null,     360px    ) // 모바일 제일 작은 사이즈
 	));
 
 // Base.

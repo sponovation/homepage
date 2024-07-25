@@ -1,3 +1,4 @@
+
 ///
 /// Solid State by HTML5 UP
 /// html5up.net | @ajlkn
@@ -6,49 +7,39 @@
 
 /* Type */
 	html {
-		font-size: 24px; /* 기본 설정: 1rem = 16px */
+		font-size: 10px; /* 기본 설정: 1rem = 10px */
 	}
 
-	body, input, select, textarea {
+	body, input, select, textarea, p {
 		color: _palette(black);
 		font-family: _font(family);
-		font-size: 16px;
-		font-weight: _font(weight);
+		font-size: 2.4rem;
+		font-weight: _font(weight-normal);
 		line-height: 1.65;
+		font-style: normal;
 
 		@include breakpoint('<=xlarge') {
-			font-size: 15pt;
-			html {
-				font-size: 15px; /* 기본 설정: 1rem = 16px */
-			}
+			font-size: 2.4rem;
 		}
 
 		@include breakpoint('<=large') {
-			font-size: 15pt;
-			html {
-				font-size: 15px; /* 기본 설정: 1rem = 16px */
-			}
+			font-size: 1.5rem;
+			line-height: 2.1rem;
 		}
 
 		@include breakpoint('<=medium') {
-			font-size: 15pt;
-			html {
-				font-size: 15px; /* 기본 설정: 1rem = 16px */
-			}
+			font-size: 1.5rem;
+			line-height: 2.1rem;
 		}
 
 		@include breakpoint('<=small') {
-			font-size: 15pt;
-			html {
-				font-size: 15px; /* 기본 설정: 1rem = 16px */
-			}
+			font-size: 1.5rem;
+			line-height: 2.1rem;
 		}
 
 		@include breakpoint('<=xsmall') {
-			font-size: 15pt;
-			html {
-				font-size: 15px; /* 기본 설정: 1rem = 16px */
-			}
+			font-size: 1.5rem;
+			line-height: 2.1rem;
 		}
 	}
 
@@ -67,10 +58,20 @@
 			border-bottom: 0;
 			display: block;
 			font-family: _font(family-heading);
-			font-size: 0.8em;
-			font-weight: _font(weight-extra-bold);
+			font-size: 2.5rem;
+			font-style: normal;
+			font-weight: 800;
+			line-height: 3.5rem; 
 			margin: 0 0 _size(element-margin) 0;
 			text-transform: uppercase;
+
+
+			@include breakpoint('<=xlarge') {
+				font-size: 1.59rem;
+				font-style: normal;
+				font-weight: 800;
+				line-height: 2.226rem; /* 140% */
+			}
 
 			&:before {
 				@include vendor('transition', 'background-color #{_duration(transition)} ease-in-out');
@@ -120,11 +121,12 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		color: _palette(fg-bold);
-		font-size: 4.375rem;
+		font-size: 7rem;
 		font-family: _font(family-heading);
 		font-weight: _font(weight-extra-bold);
 		font-style: normal;
 		text-transform: uppercase;
+		line-height: 8.7rem;
 
 		a {
 			color: inherit;
@@ -145,15 +147,20 @@
 		&.major.title {
 			padding-bottom: 67px;
 			color: _palette(blue);
-			font-size: 70px;
+			font-size: 7rem;
 			font-style: normal;
-			font-weight: 800;
-			line-height: 87px; /* 124.286% */
-		}
-	}
+			font-weight: _font(weight-extra-bold);
+			line-height: 8.7rem;
 
-	h2 {
-		font-size: 1.2em;
+			@include breakpoint('<=large') {
+				color: #2B2E83;
+				font-family: Pretendard;
+				font-size: 2.6rem;
+				font-style: normal;
+				font-weight: _font(weight-extra-bold);
+				line-height: 3.3rem; /* 126.923% */
+			}
+		}
 	}
 
 	h3 {
@@ -172,9 +179,10 @@
 		font-size: 0.7em;
 	}
 
-	@include breakpoint('<=small') {
+	@include breakpoint('<=large') {
 		h2 {
-			font-size: 1em;
+			font-size: 2.6rem;
+			line-height: 3.3rem;
 		}
 
 		h3 {
@@ -249,9 +257,18 @@
 
 	span.additional {
 		color: #000;
-		font-size: 1.875rem;
+		font-size: 3rem;
 		font-style: normal;
 		font-weight: _font(weight-extra-bold);
 		line-height: normal;
-		letter-spacing: -0.0375rem;
+		letter-spacing: -0.06rem;
+
+		@include breakpoint('<=large') {
+			color: #000;
+			font-size: 1.6rem;
+			font-style: normal;
+			font-weight: _font(weight-extra-bold);
+			line-height: normal;
+			letter-spacing: -0.032rem;
+		}
 	}

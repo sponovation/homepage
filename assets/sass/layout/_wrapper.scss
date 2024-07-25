@@ -19,19 +19,32 @@
 			}
 
 			h2 {
+				color: #FFF;
+				text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 				border-bottom: solid 2px _palette(border);
-				font-size: 2em;
+				font-size: 7rem;
+				font-style: normal;
+				font-weight: 800;
+				line-height: 8.7rem;
 				margin-bottom: _size(element-margin) * 0.4;
 				padding-bottom: _size(element-margin) * 0.2;
 			}
 
 			p {
-				font-family: _font(family-heading);
-				font-size: 1em;
-				font-weight: _font(weight-heading);
-				letter-spacing: _font(kern-heading);
-				line-height: 2;
-				text-transform: uppercase;
+				color: #FFF;
+				font-size: 2.4rem;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 3.5rem;
+
+
+				@include breakpoint('<=large') {
+					text-align: justify;
+					font-size: 1.5rem;
+					font-style: normal;
+					font-weight: 600;
+					line-height: 2.1rem; 
+				}
 			}
 		}
 
@@ -93,7 +106,7 @@
 	}
 
 	.wrapper {
-		background-color: _palette(bg);
+		background: linear-gradient(180deg, #FFF 0%, #ECF6FF 77.5%);
 		position: relative;
 
 		&.alt {

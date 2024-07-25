@@ -114,54 +114,44 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 
 /* Type */
 html {
-  font-size: 24px; /* 기본 설정: 1rem = 16px */
+  font-size: 10px; /* 기본 설정: 1rem = 10px */
 }
 
-body, input, select, textarea {
+body, input, select, textarea, p {
   color: #000000;
-  font-family: "Pretendard Variable", "Source Sans Pro", Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: 300;
+  font-family: "Pretendard Variable", Pretendard, "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 500;
   line-height: 1.65;
+  font-style: normal;
 }
 @media screen and (max-width: 1680px) {
-  body, input, select, textarea {
-    font-size: 15pt;
-  }
-  body html, input html, select html, textarea html {
-    font-size: 15px; /* 기본 설정: 1rem = 16px */
+  body, input, select, textarea, p {
+    font-size: 2.4rem;
   }
 }
 @media screen and (max-width: 1280px) {
-  body, input, select, textarea {
-    font-size: 15pt;
-  }
-  body html, input html, select html, textarea html {
-    font-size: 15px; /* 기본 설정: 1rem = 16px */
+  body, input, select, textarea, p {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
   }
 }
 @media screen and (max-width: 980px) {
-  body, input, select, textarea {
-    font-size: 15pt;
-  }
-  body html, input html, select html, textarea html {
-    font-size: 15px; /* 기본 설정: 1rem = 16px */
+  body, input, select, textarea, p {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
   }
 }
 @media screen and (max-width: 736px) {
-  body, input, select, textarea {
-    font-size: 15pt;
-  }
-  body html, input html, select html, textarea html {
-    font-size: 15px; /* 기본 설정: 1rem = 16px */
+  body, input, select, textarea, p {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
   }
 }
 @media screen and (max-width: 480px) {
-  body, input, select, textarea {
-    font-size: 15pt;
-  }
-  body html, input html, select html, textarea html {
-    font-size: 15px; /* 기본 설정: 1rem = 16px */
+  body, input, select, textarea, p {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
   }
 }
 
@@ -181,11 +171,21 @@ a:hover {
 a.special:not(.button) {
   border-bottom: 0;
   display: block;
-  font-family: "Pretendard Variable", Raleway, Helvetica, sans-serif;
-  font-size: 0.8em;
+  font-family: "Pretendard Variable", Pretendard, Raleway, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-style: normal;
   font-weight: 800;
+  line-height: 3.5rem;
   margin: 0 0 2em 0;
   text-transform: uppercase;
+}
+@media screen and (max-width: 1680px) {
+  a.special:not(.button) {
+    font-size: 1.59rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 2.226rem; /* 140% */
+  }
 }
 a.special:not(.button):before {
   -moz-transition: background-color 0.2s ease-in-out;
@@ -230,11 +230,12 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
-  font-size: 4.375rem;
-  font-family: "Pretendard Variable", Raleway, Helvetica, sans-serif;
+  font-size: 7rem;
+  font-family: "Pretendard Variable", Pretendard, Raleway, Helvetica, sans-serif;
   font-weight: 800;
   font-style: normal;
   text-transform: uppercase;
+  line-height: 8.7rem;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: inherit;
@@ -251,14 +252,20 @@ h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
 h1.major.title, h2.major.title, h3.major.title, h4.major.title, h5.major.title, h6.major.title {
   padding-bottom: 67px;
   color: #2B2E83;
-  font-size: 70px;
+  font-size: 7rem;
   font-style: normal;
   font-weight: 800;
-  line-height: 87px; /* 124.286% */
+  line-height: 8.7rem;
 }
-
-h2 {
-  font-size: 1.2em;
+@media screen and (max-width: 1280px) {
+  h1.major.title, h2.major.title, h3.major.title, h4.major.title, h5.major.title, h6.major.title {
+    color: #2B2E83;
+    font-family: Pretendard;
+    font-size: 2.6rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 3.3rem; /* 126.923% */
+  }
 }
 
 h3 {
@@ -277,9 +284,10 @@ h6 {
   font-size: 0.7em;
 }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 1280px) {
   h2 {
-    font-size: 1em;
+    font-size: 2.6rem;
+    line-height: 3.3rem;
   }
   h3 {
     font-size: 0.8em;
@@ -350,11 +358,21 @@ hr.major {
 
 span.additional {
   color: #000;
-  font-size: 1.875rem;
+  font-size: 3rem;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
-  letter-spacing: -0.0375rem;
+  letter-spacing: -0.06rem;
+}
+@media screen and (max-width: 1280px) {
+  span.additional {
+    color: #000;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: -0.032rem;
+  }
 }
 
 /* Row */
@@ -1720,7 +1738,7 @@ form > .fields > .field.quarter {
 label {
   color: #ffffff;
   display: block;
-  font-family: "Pretendard Variable", Raleway, Helvetica, sans-serif;
+  font-family: "Pretendard Variable", Pretendard, Raleway, Helvetica, sans-serif;
   font-size: 0.8em;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -1817,7 +1835,7 @@ input[type=radio] + label {
   cursor: pointer;
   display: inline-block;
   font-size: 1em;
-  font-family: "Pretendard Variable", "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Pretendard Variable", Pretendard, "Source Sans Pro", Helvetica, sans-serif;
   text-transform: none;
   letter-spacing: 0;
   font-weight: 300;
@@ -2328,7 +2346,7 @@ button,
   color: #ffffff !important;
   cursor: pointer;
   display: inline-block;
-  font-family: "Pretendard Variable", Raleway, Helvetica, sans-serif;
+  font-family: "Pretendard Variable", Pretendard, Raleway, Helvetica, sans-serif;
   font-size: 0.8em;
   font-weight: 700;
   height: 3.75em;
@@ -2528,7 +2546,7 @@ button:disabled,
   border: 0;
 }
 #header nav {
-  font-family: "Pretendard Variable", Raleway, Helvetica, sans-serif;
+  font-family: "Pretendard Variable", Pretendard, Raleway, Helvetica, sans-serif;
   font-size: 0.8em;
   font-weight: 700;
   height: 3em;
@@ -2724,7 +2742,7 @@ button:disabled,
   border-radius: 5px;
   border: 0;
   display: block;
-  font-family: "Pretendard Variable", Raleway, Helvetica, sans-serif;
+  font-family: "Pretendard Variable", Pretendard, Raleway, Helvetica, sans-serif;
   font-size: 0.8em;
   font-weight: 200;
   letter-spacing: 0.1em;
@@ -2814,9 +2832,9 @@ body.is-menu-visible #menu .inner {
   -ms-filter: blur(0);
   filter: blur(0);
   opacity: 1;
-  font-size: 2.25em;
   margin-bottom: 0.8em;
   padding-bottom: 0.4em;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 #banner p {
   -moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease, -moz-filter 0.25s ease;
@@ -2836,8 +2854,6 @@ body.is-menu-visible #menu .inner {
   -ms-filter: blur(0);
   filter: blur(0);
   opacity: 1;
-  font-family: "Pretendard Variable", Raleway, Helvetica, sans-serif;
-  font-size: 24px;
   font-weight: 600;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -2872,11 +2888,8 @@ body.is-menu-visible #menu .inner {
   #banner .logo .icon {
     font-size: 1.5em;
   }
-  #banner h2 {
-    font-size: 1.5em;
-  }
   #banner p {
-    font-size: 0.8em;
+    font-size: 1.5rem;
   }
 }
 body.is-preload #banner .logo {
@@ -2918,18 +2931,31 @@ body.is-preload #banner p {
   width: 55em;
 }
 #wrapper > header h2 {
+  color: #FFF;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-bottom: solid 2px rgba(255, 255, 255, 0.125);
-  font-size: 2em;
+  font-size: 7rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 8.7rem;
   margin-bottom: 0.8em;
   padding-bottom: 0.4em;
 }
 #wrapper > header p {
-  font-family: "Pretendard Variable", Raleway, Helvetica, sans-serif;
-  font-size: 1em;
-  font-weight: 200;
-  letter-spacing: 0.1em;
-  line-height: 2;
-  text-transform: uppercase;
+  color: #FFF;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 3.5rem;
+}
+@media screen and (max-width: 1280px) {
+  #wrapper > header p {
+    text-align: justify;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.1rem;
+  }
 }
 @media screen and (max-width: 1280px) {
   #wrapper > header {
@@ -2967,7 +2993,7 @@ body.is-preload #banner p {
 }
 
 .wrapper {
-  background-color: #2e3141;
+  background: linear-gradient(180deg, #FFF 0%, #ECF6FF 77.5%);
   position: relative;
 }
 .wrapper.alt:before {

@@ -30,9 +30,9 @@
 
 // Font.
 	$font: (
-		family:					('Pretendard Variable', 'Source Sans Pro', Helvetica, sans-serif),
+		family:					('Pretendard Variable', Pretendard, 'Source Sans Pro', Helvetica, sans-serif),
 		family-fixed:			('Courier New', monospace),
-		family-heading:			('Pretendard Variable', Raleway, Helvetica, sans-serif),
+		family-heading:			('Pretendard Variable', Pretendard, Raleway, Helvetica, sans-serif),
 		weight:					300,
 		weight-bold:			600,
 		weight-heading:			200,
@@ -61,9 +61,4 @@
 		light-blue: 					#1C64D1, 
 		blue-linear: 			linear-gradient(90deg, #00C2FF 0%, #5256CD 100%),
 		bg-linear:				linear-gradient(180deg, #FFF 0%, #ECF6FF 77.5%),
-
-
-
-
-
 	);
