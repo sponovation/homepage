@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/* 기준 화면 너비 */
+/* pixel을 vw로 변환해주는 함수 */
+/* 반응형이 일어날 화면 설정 */
+/* 화면 크기에 따라 크기를 알맞게 설정해주는 함수 */
 @import 'fontawesome-all.min.css';
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic");
@@ -230,12 +234,22 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
-  font-size: 7rem;
+  font-size: 70px;
   font-family: "Pretendard Variable", Pretendard, Raleway, Helvetica, sans-serif;
   font-weight: 800;
   font-style: normal;
   text-transform: uppercase;
-  line-height: 8.7rem;
+  line-height: 87px;
+}
+@media (max-width: 1920px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 3.6458333333vw;
+  }
+}
+@media (max-width: 1920px) {
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 4.53125vw;
+  }
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: inherit;
@@ -286,10 +300,20 @@ h6 {
   font-size: 0.7em;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 480px) {
   h2, h3 {
-    font-size: 2.6rem;
-    line-height: 3.3rem;
+    font-size: 26px;
+    line-height: 33px;
+  }
+}
+@media screen and (max-width: 480px) and (max-width: 1920px) {
+  h2, h3 {
+    font-size: 5.4166666667vw;
+  }
+}
+@media screen and (max-width: 480px) and (max-width: 1920px) {
+  h2, h3 {
+    line-height: 6.875vw;
   }
 }
 sub {

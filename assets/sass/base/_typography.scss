@@ -121,12 +121,12 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		color: _palette(fg-bold);
-		font-size: 7rem;
+		@include set-vw(font-size, 70px);
 		font-family: _font(family-heading);
 		font-weight: _font(weight-extra-bold);
 		font-style: normal;
 		text-transform: uppercase;
-		line-height: 8.7rem;
+		@include set-vw(line-height, 87px);
 
 		a {
 			color: inherit;
@@ -181,10 +181,10 @@
 		font-size: 0.7em;
 	}
 
-	@include breakpoint('<=large') {
+	@include breakpoint('<=xsmall') {
 		h2, h3 {
-			font-size: 2.6rem;
-			line-height: 3.3rem;
+			@include set-vw(font-size, 26px, 480);
+			@include set-vw(line-height, 33px, 480);
 		}
 	}
 

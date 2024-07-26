@@ -1,3 +1,8 @@
+@charset "UTF-8";
+/* 기준 화면 너비 */
+/* pixel을 vw로 변환해주는 함수 */
+/* 반응형이 일어날 화면 설정 */
+/* 화면 크기에 따라 크기를 알맞게 설정해주는 함수 */
 /*
 	Solid State by HTML5 UP
 	html5up.net | @ajlkn
