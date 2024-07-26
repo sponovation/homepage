@@ -164,7 +164,9 @@
 	}
 
 	h3 {
-		font-size: 0.9em;
+		text-align: center;
+		color: _palette(black);
+		font-weight: 500;
 	}
 
 	h4 {
@@ -180,13 +182,9 @@
 	}
 
 	@include breakpoint('<=large') {
-		h2 {
+		h2, h3 {
 			font-size: 2.6rem;
 			line-height: 3.3rem;
-		}
-
-		h3 {
-			font-size: 0.8em
 		}
 	}
 
@@ -270,5 +268,20 @@
 			font-weight: _font(weight-extra-bold);
 			line-height: normal;
 			letter-spacing: -0.032rem;
+		}
+	}
+
+	.linear-text {
+		background: linear-gradient(90deg, #00C2FF 0%, #2B2E83 90%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.platform-h3 {
+		display: flex;
+
+		@include breakpoint('<=xsmall') {
+			flex-direction: column;
 		}
 	}
