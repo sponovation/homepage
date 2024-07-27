@@ -1,0 +1,83 @@
+#goods {
+  .inner {
+    max-width: 1920px;
+    @include set-vw(padding-left, 139px);
+    @include set-vw(padding-right, 138px);
+
+    @include breakpoint("<=xsmall") {
+      padding-left: 21px;
+      padding-right: 21px;
+    }
+  }
+}
+
+.goods-items {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @include set-vw(gap, 28.67px);
+  // justify-content: center;
+  @include breakpoint("<=xsmall") {
+    gap: 10.4px;
+  }
+
+  .goods-item {
+    @include set-vw(width, 528.329px);
+    @include set-vw(height, 349.441px);
+    border-radius: 15px;
+    @include set-vw(padding-left, 59px);
+    @include set-vw(padding-top, 42px);
+    background: url(../../../images/goods/rectangle-2.png) lightgray 50% / cover
+      no-repeat;
+
+    @include breakpoint("<=xsmall") {
+      width: 153.598px;
+      height: 153.598px;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: url(../../../images/goods/small-2.png) lightgray 50% / cover
+        no-repeat;
+    }
+  }
+
+  .goods-item-text {
+    color: #fff;
+    @include set-vw(font-size, 43px);
+    @include set-vw(line-height, 49px);
+    font-style: normal;
+    font-weight: 600;
+
+    @include breakpoint("<=small") {
+      color: #fff;
+      text-align: center;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 21px; /* 123.529% */
+    }
+  }
+}
+
+.make-items {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @include set-vw(gap, 28.67px);
+
+  @include breakpoint("<=xsmall") {
+    gap: 10px;
+  }
+
+  .goods-item {
+    border-radius: 4.372px;
+    @include set-vw(width, 528.329px);
+    @include set-vw(height, 349.441px);
+    background: url(../../../images/goods/made/rectangle-28.png) lightgray 50% /
+      cover no-repeat;
+  }
+}

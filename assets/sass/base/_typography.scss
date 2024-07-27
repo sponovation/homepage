@@ -156,6 +156,14 @@ h6 {
       line-height: 33px;
     }
   }
+
+  @include breakpoint("<=large") {
+    text-shadow: 0px 0.586px 1.173px rgba(0, 0, 0, 0.25);
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 33px;
+  }
 }
 
 h3 {
@@ -179,8 +187,8 @@ h6 {
 @include breakpoint("<=xsmall") {
   h2,
   h3 {
-    @include set-vw(font-size, 26px, 480);
-    @include set-vw(line-height, 33px, 480);
+    font-size: 26px;
+    line-height: 33px;
   }
 }
 
@@ -272,10 +280,38 @@ span.additional {
   -webkit-text-fill-color: transparent;
 }
 
-.platform-h3 {
-  display: flex;
+.linear-h3 {
+  background: linear-gradient(90deg, #00c2ff 6.62%, #2b2e83 99.63%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  @include set-vw(font-size, 70px);
+  @include set-vw(line-height, 87px);
+  font-style: normal;
+  font-weight: 800;
+  @include set-vw(margin-bottom, 18px);
+
+  @include breakpoint("<=medium") {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 33px; /* 126.923% */
+    margin-bottom: 10px;
+  }
+}
+
+.additional-text {
+  color: #484848;
+  text-align: center;
+  @include set-vw(padding-bottom, 72px);
+  @include set-vw(font-size, 32px);
+
+  @include breakpoint("<=large") {
+    font-size: 15px;
+  }
 
   @include breakpoint("<=xsmall") {
-    flex-direction: column;
+    padding-bottom: 31px;
   }
 }

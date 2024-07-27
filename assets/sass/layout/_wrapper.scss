@@ -18,19 +18,10 @@
 
     .inner {
       margin: 0 auto;
-      width: _size(inner);
-    }
-
-    h2 {
-      color: #fff;
-      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-      border-bottom: solid 2px _palette(border);
-      @include set-vw(font-size, 70px);
-      @include set-vw(line-height, 87px);
-      font-style: normal;
-      font-weight: 800;
-      margin-bottom: _size(element-margin) * 0.4;
-      padding-bottom: _size(element-margin) * 0.2;
+      max-width: 1920px;
+      @include set-vw(padding-left, 210.73px);
+      @include set-vw(padding-bottom, 201px);
+      @include set-vw(padding-top, 193px);
     }
 
     p {
@@ -39,11 +30,13 @@
       @include set-vw(line-height, 35px);
       font-style: normal;
       font-weight: 600;
+      @include set-vw(padding-top, 67px);
+      @include set-vw(max-width, 1199px);
 
       @include breakpoint("<=large") {
         text-align: justify;
-        @include set-vw(font-size, 15px);
-        @include set-vw(line-height, 21px);
+        font-size: 15px;
+        line-height: 21px;
         font-style: normal;
         font-weight: 600;
       }
@@ -102,14 +95,6 @@
       background-size: auto, 125%;
 
       margin-bottom: (_size(wrapper-edges, small) * -1);
-
-      h2 {
-        font-size: 1.25em;
-      }
-
-      p {
-        font-size: 0.8em;
-      }
     }
   }
 }
@@ -135,7 +120,11 @@
   .inner {
     @include padding(3em, 0);
     margin: 0 auto;
-    width: _size(inner);
+    max-width: 1920px;
+    @include set-vw(padding-top, 165px);
+    @include set-vw(padding-right, 207px);
+    @include set-vw(padding-bottom, 164px);
+    @include set-vw(padding-left, 207px);
   }
 
   &.spotlight {
@@ -150,6 +139,7 @@
       @include vendor("display", "flex");
       @include vendor("align-items", "center");
       @include vendor("flex-direction", "row");
+      @include set-vw(gap, 45px);
     }
 
     .image {
@@ -354,6 +344,29 @@
     @include breakpoint("<=xsmall") {
       // @include set-vw(font-size, 26px, 480);
       width: 200px;
+    }
+  }
+}
+
+.line-text {
+  display: flex;
+
+  .line {
+    border-bottom: 1px solid white;
+    flex: 1 1 auto;
+    margin-bottom: 0.15em;
+    margin-left: 40px;
+    text-align: end;
+    @include set-vw(font-size, 30px);
+    color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+    font-weight: 800;
+    @include set-vw(letter-spacing, -0.6px);
+    vertical-align: bottom;
+
+    @include breakpoint("<=large") {
+      // @include set-vw(font-size, 26px, 480);
+      font-size: 15px;
     }
   }
 }
