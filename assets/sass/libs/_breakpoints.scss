@@ -224,12 +224,13 @@
 
 	/* 기준 화면 너비 */
 	$vw-viewport-large: 1920;
+	$vw-viewport-small: 980;
 	$vw-viewport-small: 480;
 
 	/* pixel을 vw로 변환해주는 함수 */
 	@function get-vw($px, $vw-viewport){
 		$factor: if($vw-viewport == 480, 1.33, 1);
-		$vw-context: $vw-viewport * 0.01 * 1px;
+		$vw-context: $vw-viewport * 0.01 * 1px * $factor;
 	  @return $px / $vw-context * 1vw;
 	}
 

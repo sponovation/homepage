@@ -124,38 +124,25 @@ html {
 body, input, select, textarea, p {
   color: #000000;
   font-family: "Pretendard Variable", Pretendard, "Source Sans Pro", Helvetica, sans-serif;
-  font-size: 2.4rem;
+  font-size: 24px;
   font-weight: 500;
-  line-height: 1.65;
+  line-height: 35px;
   font-style: normal;
+}
+@media (max-width: 1920px) {
+  body, input, select, textarea, p {
+    font-size: 1.25vw;
+  }
+}
+@media (max-width: 1920px) {
+  body, input, select, textarea, p {
+    line-height: 1.8229166667vw;
+  }
 }
 @media screen and (max-width: 1680px) {
   body, input, select, textarea, p {
-    font-size: 2.4rem;
-  }
-}
-@media screen and (max-width: 1280px) {
-  body, input, select, textarea, p {
-    font-size: 1.5rem;
-    line-height: 2.1rem;
-  }
-}
-@media screen and (max-width: 980px) {
-  body, input, select, textarea, p {
-    font-size: 1.5rem;
-    line-height: 2.1rem;
-  }
-}
-@media screen and (max-width: 736px) {
-  body, input, select, textarea, p {
-    font-size: 1.5rem;
-    line-height: 2.1rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  body, input, select, textarea, p {
-    font-size: 1.5rem;
-    line-height: 2.1rem;
+    font-size: 15px;
+    line-height: 21px;
   }
 }
 
@@ -176,19 +163,25 @@ a.special:not(.button) {
   border-bottom: 0;
   display: block;
   font-family: "Pretendard Variable", Pretendard, Raleway, Helvetica, sans-serif;
-  font-size: 2.5rem;
+  font-size: 25px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 800;
-  line-height: 3.5rem;
+  line-height: 35px;
   margin: 0 0 2em 0;
   text-transform: uppercase;
 }
-@media screen and (max-width: 1680px) {
+@media (max-width: 1920px) {
   a.special:not(.button) {
-    font-size: 1.59rem;
+    font-size: 1.3020833333vw;
+  }
+}
+@media screen and (max-width: 980px) {
+  a.special:not(.button) {
+    font-size: 15.9px;
     font-style: normal;
     font-weight: 800;
-    line-height: 2.226rem; /* 140% */
+    line-height: 22.26px;
   }
 }
 a.special:not(.button):before {
@@ -229,17 +222,32 @@ em, i {
 }
 
 p {
-  margin: 0 0 2em 0;
+  margin-bottom: 55px;
+}
+@media (max-width: 1920px) {
+  p {
+    margin-bottom: 2.8645833333vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  p h2, p h3 {
+    margin-bottom: 22px;
+  }
+}
+@media screen and (max-width: 480px) and (max-width: 1920px) {
+  p h2, p h3 {
+    margin-bottom: 1.1458333333vw;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
   font-size: 70px;
+  line-height: 87px;
   font-family: "Pretendard Variable", Pretendard, Raleway, Helvetica, sans-serif;
   font-weight: 800;
   font-style: normal;
   text-transform: uppercase;
-  line-height: 87px;
 }
 @media (max-width: 1920px) {
   h1, h2, h3, h4, h5, h6 {
@@ -264,21 +272,18 @@ h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
   border-bottom: solid 2px rgba(255, 255, 255, 0.125);
 }
 h1.major.title, h2.major.title, h3.major.title, h4.major.title, h5.major.title, h6.major.title {
-  padding-bottom: 67px;
+  padding-bottom: 70px;
   color: #2B2E83;
-  font-size: 7rem;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 8.7rem;
+}
+@media (max-width: 1920px) {
+  h1.major.title, h2.major.title, h3.major.title, h4.major.title, h5.major.title, h6.major.title {
+    padding-bottom: 3.6458333333vw;
+  }
 }
 @media screen and (max-width: 1280px) {
   h1.major.title, h2.major.title, h3.major.title, h4.major.title, h5.major.title, h6.major.title {
-    color: #2B2E83;
-    font-family: Pretendard;
-    font-size: 2.6rem;
-    font-style: normal;
-    font-weight: 800;
-    line-height: 3.3rem; /* 126.923% */
+    font-size: 26px;
+    line-height: 33px;
   }
 }
 
@@ -308,12 +313,12 @@ h6 {
 }
 @media screen and (max-width: 480px) and (max-width: 1920px) {
   h2, h3 {
-    font-size: 5.4166666667vw;
+    font-size: 4.0726817043vw;
   }
 }
 @media screen and (max-width: 480px) and (max-width: 1920px) {
   h2, h3 {
-    line-height: 6.875vw;
+    line-height: 5.1691729323vw;
   }
 }
 sub {
@@ -359,12 +364,8 @@ pre code {
 }
 
 hr {
+  height: 1px;
   border: 0;
-  border-bottom: solid 2px rgba(255, 255, 255, 0.125);
-  margin: 2.5em 0;
-}
-hr.major {
-  margin: 4em 0;
 }
 
 .align-left {
@@ -381,20 +382,37 @@ hr.major {
 
 span.additional {
   color: #000;
-  font-size: 3rem;
-  font-style: normal;
+  font-size: 30px;
+  letter-spacing: -0.6px;
   font-weight: 800;
+  font-style: normal;
   line-height: normal;
-  letter-spacing: -0.06rem;
+  display: inline-block;
+  margin-bottom: 21px;
+}
+@media (max-width: 1920px) {
+  span.additional {
+    font-size: 1.5625vw;
+  }
+}
+@media (max-width: 1920px) {
+  span.additional {
+    letter-spacing: -0.03125vw;
+  }
+}
+@media (max-width: 1920px) {
+  span.additional {
+    margin-bottom: 1.09375vw;
+  }
 }
 @media screen and (max-width: 1280px) {
   span.additional {
     color: #000;
-    font-size: 1.6rem;
+    font-size: 16px;
+    letter-spacing: -0.32px;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
-    letter-spacing: -0.032rem;
   }
 }
 
@@ -2823,11 +2841,12 @@ body.is-menu-visible #menu .inner {
 }
 
 /* Banner */
+#banner {
+  padding: 10em 0 4.75em 0;
+}
 #banner .inner {
   margin: 0 auto;
   width: 55em;
-  padding: 0px 21px;
-  max-width: 1464px;
 }
 #banner .logo {
   -moz-transition: opacity 2s ease, -moz-transform 1s ease;
@@ -2925,9 +2944,6 @@ body.is-menu-visible #menu .inner {
   }
   #banner .logo .icon {
     font-size: 1.5em;
-  }
-  #banner p {
-    font-size: 1.5rem;
   }
 }
 body.is-preload #banner .logo {
@@ -3196,6 +3212,51 @@ body.is-preload #banner p {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.text-hr {
+  display: flex;
+  gap: 51px;
+}
+@media (max-width: 1920px) {
+  .text-hr {
+    gap: 2.65625vw;
+  }
+}
+
+.text-hr .hr {
+  flex: 1 1 auto;
+  border-bottom: 1px solid #2B2E83;
+  margin-bottom: 4px;
+}
+
+.media {
+  background: #FFF;
+}
+.media h2 {
+  font-size: 40px;
+  line-height: 87px;
+  color: #2B2E83;
+  font-style: normal;
+  font-weight: 800;
+  border-bottom: 1.5px solid #2B2E83;
+}
+@media (max-width: 1920px) {
+  .media h2 {
+    font-size: 2.0833333333vw;
+  }
+}
+@media (max-width: 1920px) {
+  .media h2 {
+    line-height: 4.53125vw;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .media h2 {
+    font-size: 26px;
+    border-bottom: 1px solid #2B2E83;
+    width: 80%;
+  }
 }
 
 /* Footer */

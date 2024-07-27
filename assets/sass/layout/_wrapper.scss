@@ -290,3 +290,34 @@
 		flex-direction: column;
 		align-items: center;
 	}
+
+	.text-hr {
+		display: flex;
+		@include set-vw(gap, 51px);
+	}
+
+	.text-hr .hr {
+		flex: 1 1 auto;
+		border-bottom: 1px solid _palette(blue);
+		margin-bottom: 4px;
+	}
+
+	.media {
+		background: #FFF;
+
+		h2 {
+			@include set-vw(font-size, 40px);
+			@include set-vw(line-height, 87px);
+			color: #2B2E83;
+			font-style: normal;
+			font-weight: 800;
+			border-bottom: 1.5px solid _palette(blue);
+
+			@include breakpoint('<=large') {
+				// @include set-vw(font-size, 26px, 480);
+				font-size: 26px;
+				border-bottom: 1px solid _palette(blue);
+				width: 80%;
+			}
+		}
+	}

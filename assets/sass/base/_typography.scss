@@ -13,33 +13,14 @@
 	body, input, select, textarea, p {
 		color: _palette(black);
 		font-family: _font(family);
-		font-size: 2.4rem;
+		@include set-vw(font-size, 24px);
 		font-weight: _font(weight-normal);
-		line-height: 1.65;
+		@include set-vw(line-height, 35px);
 		font-style: normal;
 
 		@include breakpoint('<=xlarge') {
-			font-size: 2.4rem;
-		}
-
-		@include breakpoint('<=large') {
-			font-size: 1.5rem;
-			line-height: 2.1rem;
-		}
-
-		@include breakpoint('<=medium') {
-			font-size: 1.5rem;
-			line-height: 2.1rem;
-		}
-
-		@include breakpoint('<=small') {
-			font-size: 1.5rem;
-			line-height: 2.1rem;
-		}
-
-		@include breakpoint('<=xsmall') {
-			font-size: 1.5rem;
-			line-height: 2.1rem;
+			font-size: 15px;
+			line-height: 21px;
 		}
 	}
 
@@ -58,19 +39,20 @@
 			border-bottom: 0;
 			display: block;
 			font-family: _font(family-heading);
-			font-size: 2.5rem;
+			@include set-vw(font-size, 25px);
+			font-size: 25px;
 			font-style: normal;
 			font-weight: 800;
-			line-height: 3.5rem; 
+			line-height: 35px;
 			margin: 0 0 _size(element-margin) 0;
 			text-transform: uppercase;
 
 
-			@include breakpoint('<=xlarge') {
-				font-size: 1.59rem;
+			@include breakpoint('<=medium') {
+				font-size: 15.9px;
 				font-style: normal;
 				font-weight: 800;
-				line-height: 2.226rem; /* 140% */
+				line-height: 22.26px;
 			}
 
 			&:before {
@@ -116,17 +98,23 @@
 	}
 
 	p {
-		margin: 0 0 _size(element-margin) 0;
+		@include set-vw(margin-bottom, 55px);
+
+		@include breakpoint('<=xsmall') {
+			h2, h3 {
+				@include set-vw(margin-bottom, 22px);
+			}
+		}	
 	}
 
 	h1, h2, h3, h4, h5, h6 {
 		color: _palette(fg-bold);
 		@include set-vw(font-size, 70px);
+		@include set-vw(line-height, 87px);
 		font-family: _font(family-heading);
 		font-weight: _font(weight-extra-bold);
 		font-style: normal;
 		text-transform: uppercase;
-		@include set-vw(line-height, 87px);
 
 		a {
 			color: inherit;
@@ -145,20 +133,12 @@
 		}
 
 		&.major.title {
-			padding-bottom: 67px;
+			@include set-vw(padding-bottom, 70px);
 			color: _palette(blue);
-			font-size: 7rem;
-			font-style: normal;
-			font-weight: _font(weight-extra-bold);
-			line-height: 8.7rem;
 
 			@include breakpoint('<=large') {
-				color: #2B2E83;
-				font-family: Pretendard;
-				font-size: 2.6rem;
-				font-style: normal;
-				font-weight: _font(weight-extra-bold);
-				line-height: 3.3rem; /* 126.923% */
+				font-size: 26px;
+				line-height: 33px;
 			}
 		}
 	}
@@ -232,13 +212,8 @@
 	}
 
 	hr {
+		height: 1px;
 		border: 0;
-		border-bottom: solid 2px _palette(border);
-		margin: (_size(element-margin) * 1.25) 0;
-
-		&.major {
-			margin: (_size(element-margin) * 2) 0;
-		}
 	}
 
 	.align-left {
@@ -255,19 +230,21 @@
 
 	span.additional {
 		color: #000;
-		font-size: 3rem;
-		font-style: normal;
+		@include set-vw(font-size, 30px);
+		@include set-vw(letter-spacing, -0.6px);
 		font-weight: _font(weight-extra-bold);
+		font-style: normal;
 		line-height: normal;
-		letter-spacing: -0.06rem;
+		display: inline-block;
+		@include set-vw(margin-bottom, 21px);
 
 		@include breakpoint('<=large') {
 			color: #000;
-			font-size: 1.6rem;
+			font-size: 16px;
+			letter-spacing: -0.32px;
 			font-style: normal;
 			font-weight: _font(weight-extra-bold);
 			line-height: normal;
-			letter-spacing: -0.032rem;
 		}
 	}
 
