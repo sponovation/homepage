@@ -1,4 +1,3 @@
-
 ///
 /// Solid State by HTML5 UP
 /// html5up.net | @ajlkn
@@ -6,259 +5,277 @@
 ///
 
 /* Type */
-	html {
-		font-size: 10px; /* 기본 설정: 1rem = 10px */
-	}
+html {
+  font-size: 10px; /* 기본 설정: 1rem = 10px */
+}
 
-	body, input, select, textarea, p {
-		color: _palette(black);
-		font-family: _font(family);
-		@include set-vw(font-size, 24px);
-		font-weight: _font(weight-normal);
-		@include set-vw(line-height, 35px);
-		font-style: normal;
+body,
+input,
+select,
+textarea,
+p {
+  color: _palette(black);
+  font-family: _font(family);
+  @include set-vw(font-size, 24px);
+  font-weight: _font(weight-normal);
+  @include set-vw(line-height, 35px);
+  font-style: normal;
 
-		@include breakpoint('<=xlarge') {
-			font-size: 15px;
-			line-height: 21px;
-		}
-	}
+  @include breakpoint("<=large") {
+    font-size: 15px;
+    line-height: 21px;
+  }
+}
 
-	a {
-		@include vendor('transition', 'color #{_duration(transition)} ease-in-out, border-bottom-color #{_duration(transition)} ease-in-out');
-		border-bottom: dotted 1px _palette(fg-light);
-		color: _palette(fg-bold);
-		text-decoration: none;
+a {
+  @include vendor(
+    "transition",
+    "color #{_duration(transition)} ease-in-out, border-bottom-color #{_duration(transition)} ease-in-out"
+  );
+  border-bottom: dotted 1px _palette(fg-light);
+  color: _palette(fg-bold);
+  text-decoration: none;
 
-		&:hover {
-			border-bottom-color: transparent;
-			color: _palette(fg-bold) !important;
-		}
+  &:hover {
+    border-bottom-color: transparent;
+    color: _palette(fg-bold) !important;
+  }
 
-		&.special:not(.button) {
-			border-bottom: 0;
-			display: block;
-			font-family: _font(family-heading);
-			@include set-vw(font-size, 25px);
-			font-size: 25px;
-			font-style: normal;
-			font-weight: 800;
-			line-height: 35px;
-			margin: 0 0 _size(element-margin) 0;
-			text-transform: uppercase;
+  &.special:not(.button) {
+    border-bottom: 0;
+    display: block;
+    font-family: _font(family-heading);
+    @include set-vw(font-size, 25px);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 35px;
+    margin: 0 0 _size(element-margin) 0;
+    text-transform: uppercase;
 
+    @include breakpoint("<=large") {
+      font-size: 15.9px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 22.26px;
+    }
 
-			@include breakpoint('<=medium') {
-				font-size: 15.9px;
-				font-style: normal;
-				font-weight: 800;
-				line-height: 22.26px;
-			}
+    &:before {
+      @include vendor(
+        "transition",
+        "background-color #{_duration(transition)} ease-in-out"
+      );
+      background: url("images/icon/circle.svg") no-repeat center; // 이미지 경로 설정
+      background-size: cover; // 이미지 크기 조절
+      background-repeat: no-repeat; // 이미지 반복 방지
+      border-radius: 100%;
+      border: solid 2px _palette(border);
+      content: "";
+      display: inline-block;
+      font-size: 1.25em;
+      height: 2em;
+      line-height: 1.75em;
+      margin-right: 0.85em;
+      text-align: center;
+      text-indent: 0.15em;
+      vertical-align: middle;
+      width: 2em;
+    }
 
-			&:before {
-				@include vendor('transition', 'background-color #{_duration(transition)} ease-in-out');
-				background: url('images/icon/circle.svg') no-repeat center;; // 이미지 경로 설정
-    			background-size: cover; // 이미지 크기 조절
-    			background-repeat: no-repeat; // 이미지 반복 방지
-				border-radius: 100%;
-				border: solid 2px _palette(border);
-				content: '';
-				display: inline-block;
-				font-size: 1.25em;
-				height: 2em;
-				line-height: 1.75em;
-				margin-right: 0.85em;
-				text-align: center;
-				text-indent: 0.15em;
-				vertical-align: middle;
-				width: 2em;
-			}
+    &:hover {
+      &:before {
+        background-color: _palette(border-bg);
+      }
+    }
 
-			&:hover {
-				&:before {
-					background-color: _palette(border-bg);
-				}
-			}
+    &:active {
+      &:before {
+        background-color: _palette(border2-bg);
+      }
+    }
+  }
+}
 
-			&:active {
-				&:before {
-					background-color: _palette(border2-bg);
-				}
-			}
-		}
-	}
+strong,
+b {
+  color: _palette(fg-bold);
+  font-weight: _font(weight-bold);
+}
 
-	strong, b {
-		color: _palette(fg-bold);
-		font-weight: _font(weight-bold);
-	}
+em,
+i {
+  font-style: italic;
+}
 
-	em, i {
-		font-style: italic;
-	}
+p {
+  @include set-vw(margin-bottom, 55px);
 
-	p {
-		@include set-vw(margin-bottom, 55px);
+  @include breakpoint("<=xsmall") {
+    h2,
+    h3 {
+      @include set-vw(margin-bottom, 22px);
+    }
+  }
+}
 
-		@include breakpoint('<=xsmall') {
-			h2, h3 {
-				@include set-vw(margin-bottom, 22px);
-			}
-		}	
-	}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: _palette(fg-bold);
+  @include set-vw(font-size, 70px);
+  @include set-vw(line-height, 87px);
+  font-family: _font(family-heading);
+  font-weight: _font(weight-extra-bold);
+  font-style: normal;
+  text-transform: uppercase;
 
-	h1, h2, h3, h4, h5, h6 {
-		color: _palette(fg-bold);
-		@include set-vw(font-size, 70px);
-		@include set-vw(line-height, 87px);
-		font-family: _font(family-heading);
-		font-weight: _font(weight-extra-bold);
-		font-style: normal;
-		text-transform: uppercase;
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 0;
+  }
 
-		a {
-			color: inherit;
-			text-decoration: none;
-			border-bottom: 0;
-		}
+  span {
+    color: _palette(blue);
+    font-weight: _font(weight-extra-bold);
+  }
 
-		span {
-			color: _palette(blue);
-			font-weight: _font(weight-extra-bold);
-		}
+  &.major {
+    border-bottom: solid 2px _palette(border);
+  }
 
+  &.major.title {
+    @include set-vw(padding-bottom, 70px);
+    color: _palette(blue);
 
-		&.major {
-			border-bottom: solid 2px _palette(border);
-		}
+    @include breakpoint("<=large") {
+      font-size: 26px;
+      line-height: 33px;
+    }
+  }
+}
 
-		&.major.title {
-			@include set-vw(padding-bottom, 70px);
-			color: _palette(blue);
+h3 {
+  text-align: center;
+  color: _palette(black);
+  font-weight: 500;
+}
 
-			@include breakpoint('<=large') {
-				font-size: 26px;
-				line-height: 33px;
-			}
-		}
-	}
+h4 {
+  font-size: 0.7em;
+}
 
-	h3 {
-		text-align: center;
-		color: _palette(black);
-		font-weight: 500;
-	}
+h5 {
+  font-size: 0.7em;
+}
 
-	h4 {
-		font-size: 0.7em;
-	}
+h6 {
+  font-size: 0.7em;
+}
 
-	h5 {
-		font-size: 0.7em;
-	}
+@include breakpoint("<=xsmall") {
+  h2,
+  h3 {
+    @include set-vw(font-size, 26px, 480);
+    @include set-vw(line-height, 33px, 480);
+  }
+}
 
-	h6 {
-		font-size: 0.7em;
-	}
+sub {
+  font-size: 0.8em;
+  position: relative;
+  top: 0.5em;
+}
 
-	@include breakpoint('<=xsmall') {
-		h2, h3 {
-			@include set-vw(font-size, 26px, 480);
-			@include set-vw(line-height, 33px, 480);
-		}
-	}
+sup {
+  font-size: 0.8em;
+  position: relative;
+  top: -0.5em;
+}
 
-	sub {
-		font-size: 0.8em;
-		position: relative;
-		top: 0.5em;
-	}
+blockquote {
+  border-left: solid 4px _palette(border);
+  font-style: italic;
+  margin: 0 0 _size(element-margin) 0;
+  padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4)
+    _size(element-margin);
+}
 
-	sup {
-		font-size: 0.8em;
-		position: relative;
-		top: -0.5em;
-	}
+code {
+  background: _palette(border-bg);
+  border-radius: _size(border-radius);
+  border: solid 2px _palette(border);
+  font-family: _font(family-fixed);
+  font-size: 0.9em;
+  margin: 0 0.25em;
+  padding: 0.25em 0.65em;
+}
 
-	blockquote {
-		border-left: solid 4px _palette(border);
-		font-style: italic;
-		margin: 0 0 _size(element-margin) 0;
-		padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4) _size(element-margin);
-	}
+pre {
+  -webkit-overflow-scrolling: touch;
+  font-family: _font(family-fixed);
+  font-size: 0.9em;
+  margin: 0 0 _size(element-margin) 0;
 
-	code {
-		background: _palette(border-bg);
-		border-radius: _size(border-radius);
-		border: solid 2px _palette(border);
-		font-family: _font(family-fixed);
-		font-size: 0.9em;
-		margin: 0 0.25em;
-		padding: 0.25em 0.65em;
-	}
+  code {
+    display: block;
+    line-height: 1.75em;
+    padding: 1em 1.5em;
+    overflow-x: auto;
+  }
+}
 
-	pre {
-		-webkit-overflow-scrolling: touch;
-		font-family: _font(family-fixed);
-		font-size: 0.9em;
-		margin: 0 0 _size(element-margin) 0;
+hr {
+  height: 1px;
+  border: 0;
+}
 
-		code {
-			display: block;
-			line-height: 1.75em;
-			padding: 1em 1.5em;
-			overflow-x: auto;
-		}
-	}
+.align-left {
+  text-align: left;
+}
 
-	hr {
-		height: 1px;
-		border: 0;
-	}
+.align-center {
+  text-align: center;
+}
 
-	.align-left {
-		text-align: left;
-	}
+.align-right {
+  text-align: right;
+}
 
-	.align-center {
-		text-align: center;
-	}
+span.additional {
+  color: #000;
+  @include set-vw(font-size, 30px);
+  @include set-vw(letter-spacing, -0.6px);
+  font-weight: _font(weight-extra-bold);
+  font-style: normal;
+  line-height: normal;
+  display: inline-block;
+  @include set-vw(margin-bottom, 21px);
 
-	.align-right {
-		text-align: right;
-	}
+  @include breakpoint("<=large") {
+    color: #000;
+    font-size: 16px;
+    letter-spacing: -0.32px;
+    font-style: normal;
+    font-weight: _font(weight-extra-bold);
+    line-height: normal;
+  }
+}
 
-	span.additional {
-		color: #000;
-		@include set-vw(font-size, 30px);
-		@include set-vw(letter-spacing, -0.6px);
-		font-weight: _font(weight-extra-bold);
-		font-style: normal;
-		line-height: normal;
-		display: inline-block;
-		@include set-vw(margin-bottom, 21px);
+.linear-text {
+  background: linear-gradient(90deg, #00c2ff 0%, #2b2e83 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-		@include breakpoint('<=large') {
-			color: #000;
-			font-size: 16px;
-			letter-spacing: -0.32px;
-			font-style: normal;
-			font-weight: _font(weight-extra-bold);
-			line-height: normal;
-		}
-	}
+.platform-h3 {
+  display: flex;
 
-	.linear-text {
-		background: linear-gradient(90deg, #00C2FF 0%, #2B2E83 90%);
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-
-	.platform-h3 {
-		display: flex;
-
-		@include breakpoint('<=xsmall') {
-			flex-direction: column;
-		}
-	}
+  @include breakpoint("<=xsmall") {
+    flex-direction: column;
+  }
+}

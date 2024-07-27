@@ -121,7 +121,11 @@ html {
   font-size: 10px; /* 기본 설정: 1rem = 10px */
 }
 
-body, input, select, textarea, p {
+body,
+input,
+select,
+textarea,
+p {
   color: #000000;
   font-family: "Pretendard Variable", Pretendard, "Source Sans Pro", Helvetica, sans-serif;
   font-size: 24px;
@@ -130,17 +134,29 @@ body, input, select, textarea, p {
   font-style: normal;
 }
 @media (max-width: 1920px) {
-  body, input, select, textarea, p {
+  body,
+  input,
+  select,
+  textarea,
+  p {
     font-size: 1.25vw;
   }
 }
 @media (max-width: 1920px) {
-  body, input, select, textarea, p {
+  body,
+  input,
+  select,
+  textarea,
+  p {
     line-height: 1.8229166667vw;
   }
 }
-@media screen and (max-width: 1680px) {
-  body, input, select, textarea, p {
+@media screen and (max-width: 1280px) {
+  body,
+  input,
+  select,
+  textarea,
+  p {
     font-size: 15px;
     line-height: 21px;
   }
@@ -176,7 +192,7 @@ a.special:not(.button) {
     font-size: 1.3020833333vw;
   }
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1280px) {
   a.special:not(.button) {
     font-size: 15.9px;
     font-style: normal;
@@ -212,12 +228,14 @@ a.special:not(.button):active:before {
   background-color: rgba(255, 255, 255, 0.075);
 }
 
-strong, b {
+strong,
+b {
   color: #ffffff;
   font-weight: 600;
 }
 
-em, i {
+em,
+i {
   font-style: italic;
 }
 
@@ -230,17 +248,24 @@ p {
   }
 }
 @media screen and (max-width: 480px) {
-  p h2, p h3 {
+  p h2,
+  p h3 {
     margin-bottom: 22px;
   }
 }
 @media screen and (max-width: 480px) and (max-width: 1920px) {
-  p h2, p h3 {
+  p h2,
+  p h3 {
     margin-bottom: 1.1458333333vw;
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #ffffff;
   font-size: 70px;
   line-height: 87px;
@@ -250,38 +275,78 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 @media (max-width: 1920px) {
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: 3.6458333333vw;
   }
 }
 @media (max-width: 1920px) {
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     line-height: 4.53125vw;
   }
 }
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
   color: inherit;
   text-decoration: none;
   border-bottom: 0;
 }
-h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
   color: #2B2E83;
   font-weight: 800;
 }
-h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
+h1.major,
+h2.major,
+h3.major,
+h4.major,
+h5.major,
+h6.major {
   border-bottom: solid 2px rgba(255, 255, 255, 0.125);
 }
-h1.major.title, h2.major.title, h3.major.title, h4.major.title, h5.major.title, h6.major.title {
+h1.major.title,
+h2.major.title,
+h3.major.title,
+h4.major.title,
+h5.major.title,
+h6.major.title {
   padding-bottom: 70px;
   color: #2B2E83;
 }
 @media (max-width: 1920px) {
-  h1.major.title, h2.major.title, h3.major.title, h4.major.title, h5.major.title, h6.major.title {
+  h1.major.title,
+  h2.major.title,
+  h3.major.title,
+  h4.major.title,
+  h5.major.title,
+  h6.major.title {
     padding-bottom: 3.6458333333vw;
   }
 }
 @media screen and (max-width: 1280px) {
-  h1.major.title, h2.major.title, h3.major.title, h4.major.title, h5.major.title, h6.major.title {
+  h1.major.title,
+  h2.major.title,
+  h3.major.title,
+  h4.major.title,
+  h5.major.title,
+  h6.major.title {
     font-size: 26px;
     line-height: 33px;
   }
@@ -306,18 +371,21 @@ h6 {
 }
 
 @media screen and (max-width: 480px) {
-  h2, h3 {
+  h2,
+  h3 {
     font-size: 26px;
     line-height: 33px;
   }
 }
 @media screen and (max-width: 480px) and (max-width: 1920px) {
-  h2, h3 {
+  h2,
+  h3 {
     font-size: 4.0726817043vw;
   }
 }
 @media screen and (max-width: 480px) and (max-width: 1920px) {
-  h2, h3 {
+  h2,
+  h3 {
     line-height: 5.1691729323vw;
   }
 }
@@ -417,7 +485,7 @@ span.additional {
 }
 
 .linear-text {
-  background: linear-gradient(90deg, #00C2FF 0%, #2B2E83 90%);
+  background: linear-gradient(90deg, #00c2ff 0%, #2b2e83 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1749,7 +1817,7 @@ form > .fields {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: calc(100% + 3em);
-  margin: -1.5em 0 2em -1.5em;
+  margin: 0 0 2em -1.5em;
 }
 form > .fields > .field {
   -moz-flex-grow: 0;
@@ -1813,10 +1881,10 @@ textarea {
   -webkit-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: rgba(255, 255, 255, 0.025);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
   border: none;
-  border: solid 2px rgba(255, 255, 255, 0.125);
+  border: solid 1px #FFFFFF;
   color: inherit;
   display: block;
   outline: 0;
@@ -2250,7 +2318,7 @@ ul.contact li:before {
 }
 ul.contact li:before {
   border-radius: 100%;
-  border: solid 2px rgba(255, 255, 255, 0.125);
+  background-color: #fff;
   display: inline-block;
   font-size: 0.8em;
   height: 2.5em;
@@ -2396,10 +2464,9 @@ button,
   -webkit-transition: background-color 0.2s ease-in-out;
   -ms-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
-  background-color: transparent;
+  background-color: #2B2E83;
   border-radius: 5px;
   border: 0;
-  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
   color: #ffffff !important;
   cursor: pointer;
   display: inline-block;
@@ -2985,30 +3052,60 @@ body.is-preload #banner p {
   width: 55em;
 }
 #wrapper > header h2 {
-  color: #FFF;
+  color: #fff;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-bottom: solid 2px rgba(255, 255, 255, 0.125);
-  font-size: 7rem;
+  font-size: 70px;
+  line-height: 87px;
   font-style: normal;
   font-weight: 800;
-  line-height: 8.7rem;
   margin-bottom: 0.8em;
   padding-bottom: 0.4em;
 }
+@media (max-width: 1920px) {
+  #wrapper > header h2 {
+    font-size: 3.6458333333vw;
+  }
+}
+@media (max-width: 1920px) {
+  #wrapper > header h2 {
+    line-height: 4.53125vw;
+  }
+}
 #wrapper > header p {
-  color: #FFF;
-  font-size: 2.4rem;
+  color: #fff;
+  font-size: 24px;
+  line-height: 35px;
   font-style: normal;
   font-weight: 600;
-  line-height: 3.5rem;
+}
+@media (max-width: 1920px) {
+  #wrapper > header p {
+    font-size: 1.25vw;
+  }
+}
+@media (max-width: 1920px) {
+  #wrapper > header p {
+    line-height: 1.8229166667vw;
+  }
 }
 @media screen and (max-width: 1280px) {
   #wrapper > header p {
     text-align: justify;
-    font-size: 1.5rem;
+    font-size: 15px;
+    line-height: 21px;
     font-style: normal;
     font-weight: 600;
-    line-height: 2.1rem;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 1920px) {
+  #wrapper > header p {
+    font-size: 0.78125vw;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 1920px) {
+  #wrapper > header p {
+    line-height: 1.09375vw;
   }
 }
 @media screen and (max-width: 1280px) {
@@ -3047,7 +3144,7 @@ body.is-preload #banner p {
 }
 
 .wrapper.linear {
-  background: linear-gradient(180deg, #FFF 0%, #ECF6FF 77.5%);
+  background: linear-gradient(180deg, #fff 0%, #ecf6ff 77.5%);
 }
 
 .wrapper {
@@ -3072,9 +3169,10 @@ body.is-preload #banner p {
   width: 55em;
 }
 .wrapper.spotlight {
-  background-color: #FFF;
+  background-color: #fff;
 }
-.wrapper.spotlight h2, .wrapper.spotlight a {
+.wrapper.spotlight h2,
+.wrapper.spotlight a {
   color: #2B2E83;
 }
 .wrapper.spotlight .inner {
@@ -3107,19 +3205,19 @@ body.is-preload #banner p {
   -ms-flex: 2;
 }
 .wrapper.spotlight.style2 {
-  background-color: #F1F8FF;
+  background-color: #f1f8ff;
 }
 .wrapper.spotlight.style3 {
-  background-color: #FFF;
+  background-color: #fff;
 }
 .wrapper.spotlight.style4 {
-  background-color: #F1F8FF;
+  background-color: #f1f8ff;
 }
 .wrapper.spotlight.style5 {
-  background-color: #FFF;
+  background-color: #fff;
 }
 .wrapper.spotlight.style6 {
-  background-color: #F1F8FF;
+  background-color: #f1f8ff;
 }
 @media screen and (max-width: 980px) {
   .wrapper:before, .wrapper:after {
@@ -3194,13 +3292,13 @@ body.is-preload #banner p {
   height: 146px;
   flex-shrink: 0;
   border-radius: 15px;
-  background: linear-gradient(90deg, #00C2FF 0%, #5256CD 100%);
+  background: linear-gradient(90deg, #00c2ff 0%, #5256cd 100%);
   justify-content: center;
   align-items: center;
 }
 
 .linear-button span {
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-size: 5rem;
   font-style: normal;
@@ -3231,12 +3329,12 @@ body.is-preload #banner p {
 }
 
 .media {
-  background: #FFF;
+  background: #fff;
 }
 .media h2 {
   font-size: 40px;
   line-height: 87px;
-  color: #2B2E83;
+  color: #2b2e83;
   font-style: normal;
   font-weight: 800;
   border-bottom: 1.5px solid #2B2E83;
@@ -3255,7 +3353,40 @@ body.is-preload #banner p {
   .media h2 {
     font-size: 26px;
     border-bottom: 1px solid #2B2E83;
-    width: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .media h2 {
+    width: 200px;
+  }
+}
+
+.footer .h2 {
+  font-size: 40px;
+  line-height: 87px;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 800;
+  border-bottom: 1px solid #FFFFFF;
+}
+@media (max-width: 1920px) {
+  .footer .h2 {
+    font-size: 2.0833333333vw;
+  }
+}
+@media (max-width: 1920px) {
+  .footer .h2 {
+    line-height: 4.53125vw;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .footer .h2 {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer .h2 {
+    width: 200px;
   }
 }
 
