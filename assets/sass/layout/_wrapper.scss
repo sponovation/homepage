@@ -118,13 +118,19 @@
   }
 
   .inner {
-    @include padding(3em, 0);
     margin: 0 auto;
     max-width: 1920px;
     @include set-vw(padding-top, 165px);
     @include set-vw(padding-right, 207px);
     @include set-vw(padding-bottom, 164px);
     @include set-vw(padding-left, 207px);
+
+    @include breakpoint("<=medium") {
+      @include set-vw(padding-top, 27px, 480);
+      @include set-vw(padding-left, 21px, 480);
+      @include set-vw(padding-bottom, 69.66px,480);
+      @include set-vw(padding-right, 21px, 480);
+    }
   }
 
   &.spotlight {
@@ -140,6 +146,8 @@
       @include vendor("align-items", "center");
       @include vendor("flex-direction", "row");
       @include set-vw(gap, 45px);
+
+      
     }
 
     .image {
@@ -190,7 +198,6 @@
     }
 
     .inner {
-      @include padding(3em, 3em);
       width: 100%;
     }
 
@@ -223,10 +230,6 @@
       left: 0;
     }
 
-    .inner {
-      @include padding(2em, 2em);
-    }
-
     &.spotlight {
       .inner {
         @include vendor("align-items", "flex-start");
@@ -255,6 +258,7 @@
         margin: 0 0 (_size(element-margin) * 0.5) 0 !important;
         max-width: 85%;
         width: 12em;
+        display: none;
       }
     }
   }
@@ -369,4 +373,33 @@
       font-size: 15px;
     }
   }
+}
+
+.rectangle-image {
+  display: none;
+  width: 100%;
+  height: 230px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include breakpoint("<=xsmall") {
+    display: block;
+  }  
+}
+
+#rectangle-image1 {
+  background-image: url(../../../images/index/small-1.png);
+}
+
+#rectangle-image2 {
+  background-image: url(../../../images/index/small-2.png);
+}
+
+#rectangle-image3 {
+  background-image: url(../../../images/index/small-3.png);
+}
+
+#rectangle-image4 {
+  background-image: url(../../../images/index/small-4.png);
 }

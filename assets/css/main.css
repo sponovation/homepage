@@ -193,7 +193,6 @@ a.special:not(.button) {
   font-style: normal;
   font-weight: 800;
   line-height: 35px;
-  margin: 0 0 2em 0;
   text-transform: uppercase;
 }
 @media (max-width: 1920px) {
@@ -3234,7 +3233,6 @@ body.is-preload #banner p {
   transform: scaleY(-1) scaleX(-1);
 }
 .wrapper .inner {
-  padding: 3em 0 1em 0;
   margin: 0 auto;
   max-width: 1920px;
   padding-top: 165px;
@@ -3260,6 +3258,34 @@ body.is-preload #banner p {
 @media (max-width: 1920px) {
   .wrapper .inner {
     padding-left: 10.78125vw;
+  }
+}
+@media screen and (max-width: 980px) {
+  .wrapper .inner {
+    padding-top: 27px;
+    padding-left: 21px;
+    padding-bottom: 69.66px;
+    padding-right: 21px;
+  }
+}
+@media screen and (max-width: 980px) and (max-width: 1920px) {
+  .wrapper .inner {
+    padding-top: 4.2293233083vw;
+  }
+}
+@media screen and (max-width: 980px) and (max-width: 1920px) {
+  .wrapper .inner {
+    padding-left: 3.2894736842vw;
+  }
+}
+@media screen and (max-width: 980px) and (max-width: 1920px) {
+  .wrapper .inner {
+    padding-bottom: 10.9116541353vw;
+  }
+}
+@media screen and (max-width: 980px) and (max-width: 1920px) {
+  .wrapper .inner {
+    padding-right: 3.2894736842vw;
   }
 }
 .wrapper.spotlight {
@@ -3331,7 +3357,6 @@ body.is-preload #banner p {
     left: 0;
   }
   .wrapper .inner {
-    padding: 3em 3em 1em 3em;
     width: 100%;
   }
   .wrapper.spotlight .image {
@@ -3352,9 +3377,6 @@ body.is-preload #banner p {
   .wrapper:after {
     bottom: -2.5em;
     left: 0;
-  }
-  .wrapper .inner {
-    padding: 2em 2em 0.1em 2em;
   }
   .wrapper.spotlight .inner {
     -moz-align-items: -moz-flex-start;
@@ -3378,6 +3400,7 @@ body.is-preload #banner p {
     margin: 0 0 1em 0 !important;
     max-width: 85%;
     width: 12em;
+    display: none;
   }
 }
 @media screen and (max-width: 360px) {
@@ -3520,6 +3543,36 @@ body.is-preload #banner p {
   .line-text .line {
     font-size: 15px;
   }
+}
+
+.rectangle-image {
+  display: none;
+  width: 100%;
+  height: 230px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 480px) {
+  .rectangle-image {
+    display: block;
+  }
+}
+
+#rectangle-image1 {
+  background-image: url(../../../images/index/small-1.png);
+}
+
+#rectangle-image2 {
+  background-image: url(../../../images/index/small-2.png);
+}
+
+#rectangle-image3 {
+  background-image: url(../../../images/index/small-3.png);
+}
+
+#rectangle-image4 {
+  background-image: url(../../../images/index/small-4.png);
 }
 
 /* Footer */
