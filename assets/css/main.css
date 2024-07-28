@@ -3645,11 +3645,11 @@ body.is-preload #banner p {
   padding-left: 97px;
   padding-top: 70px;
   padding-bottom: 70px;
-  color: #979797;
+  color: #6c6c6c;
   font-size: 24px;
   line-height: 35px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
 }
 @media (max-width: 1920px) {
   .copyright {
@@ -3674,6 +3674,49 @@ body.is-preload #banner p {
 @media (max-width: 1920px) {
   .copyright {
     line-height: 1.8229166667vw;
+  }
+}
+.copyright .bold {
+  font-weight: 600;
+}
+@media screen and (max-width: 1280px) {
+  .copyright {
+    padding-top: 36px;
+    font-size: 14px;
+    line-height: 23px;
+  }
+}
+.copyright img {
+  width: 213.53px;
+  height: 35.588px;
+}
+@media (max-width: 1920px) {
+  .copyright img {
+    width: 11.1213541667vw;
+  }
+}
+@media (max-width: 1920px) {
+  .copyright img {
+    height: 1.8535416667vw;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .copyright img {
+    width: 140px;
+    height: 23.333px;
+  }
+}
+.copyright .text {
+  padding-top: 23.41px;
+}
+@media (max-width: 1920px) {
+  .copyright .text {
+    padding-top: 1.2192708333vw;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .copyright .text {
+    padding-top: 20.67px;
   }
 }
 

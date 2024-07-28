@@ -148,9 +148,37 @@
   @include set-vw(padding-left, 97px);
   @include set-vw(padding-top, 70px);
   @include set-vw(padding-bottom, 70px);
-  color: #979797;
+  color: #6c6c6c;
   @include set-vw(font-size, 24px);
   @include set-vw(line-height, 35px);
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
+
+  .bold {
+    font-weight: 600;
+  }
+
+  @include breakpoint("<=large") {
+    padding-top: 36px;
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  img {
+    @include set-vw(width, 213.53px);
+    @include set-vw(height, 35.588px);
+
+    @include breakpoint("<=large") {
+      width: 140px;
+      height: 23.333px;
+    }
+  }
+
+  .text {
+    @include set-vw(padding-top, 23.41px);
+
+    @include breakpoint("<=large") {
+      padding-top: 20.67px;
+    }
+  }
 }
