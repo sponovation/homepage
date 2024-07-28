@@ -22,9 +22,30 @@
     <div id="page-wrapper">
       <!-- Header -->
       <header id="header" class="alt">
-        <a href="index.html"><img src="images/logo-header.png" alt="sponovation logo" class="header-logo"></a>
+        <a href="index.html"
+          ><img
+            src="images/logo-header.png"
+            alt="sponovation logo"
+            class="header-logo"
+          />
+          <img
+            src="images/logo-header-mobile.png"
+            alt="sponovation logo"
+            class="header-logo-mobile"
+          />
+        </a>
+        <nav class="nav-text">
+          <a href="platform.html">Platform service</a>
+          <a href="goods.html">Sports goods</a>
+          <a href="event.html">Sports events</a>
+          <a href="management.html">Management</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <span style="flex: 1 1 auto"></span>
         <nav>
-          <a href="#menu">Menu</a>
+          <a href="#menu">
+            <img src="images/icon/menu.svg" alt="menu" class="menu" />
+          </a>
         </nav>
       </header>
 
@@ -128,7 +149,12 @@
           <div class="inner">
             <div class="content">
               <span class="additional">스포츠 이벤트를 혁신하다</span>
-              <h2 class="major title">스포츠 이벤트 <br />기획 및 운영</h2>
+              <h2 class="major title">
+                스포츠 이벤트 <br />
+                <div class="text-hr">
+                  <span>기획 및 운영</span><span class="hr"></span>
+                </div>
+              </h2>
               <p>
                 스포노베이션은 다양한 경험을 바탕으로 혁신적이고<br />
                 창의적인 스포츠 이벤트를 성공적으로 기획 및 운영하고 있습니다.
@@ -147,7 +173,12 @@
           <div class="inner">
             <div class="content">
               <span class="additional">스포츠 선수의 혁신을 뒷받침하다</span>
-              <h2 class="major title">매니지먼트 <br />& 에이전시</h2>
+              <h2 class="major title">
+                매니지먼트 <br />
+                <div class="text-hr">
+                  <span>& 에이전시</span><span class="hr"></span>
+                </div>
+              </h2>
               <p>
                 스포노베이션은 스포츠 선수들이 최상의 퍼포먼스를 낼 수 있도록 각
                 분야의 전문가들이 함께하고 있습니다.
@@ -214,45 +245,62 @@
 
       <!-- Footer -->
       <section id="footer">
-        <div class="inner">
+        <div class="inner" id="#contact">
           <h2 class="major">CONTACT</h2>
-          <form method="post" action="#">
-            <div class="fields">
-              <div class="field">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" />
+          <div class="contact-inner">
+            <form method="post" action="#">
+              <div class="fields">
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" />
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" />
+                </div>
+                <div class="field">
+                  <label for="message">Message</label>
+                  <textarea name="message" id="message" rows="4"></textarea>
+                </div>
               </div>
-              <div class="field">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" />
-              </div>
-              <div class="field">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="4"></textarea>
-              </div>
-            </div>
-            <ul class="actions">
-              <li><input type="submit" value="Send Message" /></li>
+              <ul class="actions">
+                <li><input type="submit" value="Send Message" /></li>
+              </ul>
+            </form>
+            <ul class="contact">
+              <li class="contact-icon">
+                <img
+                  src="images/icon/company.png"
+                  alt="company_logo"
+                  class="icon-img"
+                />
+                <a>
+                  (주)스포노베이션<br />
+                  [05385] 서울특별시 강동구 올림픽로 610<br />
+                  천호역 효성헤링턴타워 B동 2층<br />
+                </a>
+              </li>
+              <li class="contact-icon">
+                <img
+                  src="images/icon/message.png"
+                  alt="company_logo"
+                  class="icon-img"
+                />
+                <a href="#">spv_official@sponovation.com</a>
+              </li>
+              <li class="contact-icon">
+                <img
+                  src="images/icon/instagram.png"
+                  alt="company_logo"
+                  class="icon-img"
+                />
+                <a
+                  href="https://www.instagram.com/sponvalley_official?igsh=NmJka25zbnM2dzAy"
+                  >https://www.instagram.com/sponvalley_official?igsh=NmJka25zbnM2dzAy</a
+                >
+              </li>
             </ul>
-          </form>
-          <ul class="contact">
-            <li class="icon solid fa-home">
-              <a>
-                (주)스포노베이션<br />
-                [05385] 서울특별시 강동구 올림픽로 610<br />
-                천호역 효성헤링턴타워 B동 2층<br />
-              </a>
-            </li>
-            <li class="icon solid fa-envelope">
-              <a href="#">spv_official@sponovation.com</a>
-            </li>
-            <li class="icon brands fa-instagram">
-              <a
-                href="https://www.instagram.com/sponvalley_official?igsh=NmJka25zbnM2dzAy"
-                >https://www.instagram.com/sponvalley_official?igsh=NmJka25zbnM2dzAy</a
-              >
-            </li>
-          </ul>
+          </div>
         </div>
       </section>
       <section class="copyright">

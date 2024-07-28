@@ -8,24 +8,18 @@
 
 #footer {
   .inner {
-    @include padding(5em, 0);
+    @include set-vw(padding-left, 211px);
+    @include set-vw(padding-right, 211.5px);
+    @include set-vw(padding-top, 113px);
+    @include set-vw(padding-bottom, 180px);
     @include vendor("display", "flex");
     @include vendor("flex-direction", "row");
     @include vendor("flex-wrap", "wrap");
     margin: 0 auto;
-    width: _size(inner);
+    width: 100%;
 
     > * {
       width: 100%;
-    }
-
-    form {
-      margin: 0 _size(section-spacing, large) 0 0;
-      width: calc(50% - #{_size(section-spacing, large) * 0.5});
-    }
-
-    .contact {
-      width: calc(50% - #{_size(section-spacing, large) * 0.5});
     }
 
     .copyright {
@@ -76,7 +70,7 @@
     padding-top: _size(wrapper-edges, large);
   }
 
-  @include breakpoint("<=medium") {
+  @include breakpoint("<=small") {
     margin-top: (_size(wrapper-edges, medium) * -1);
     padding-top: _size(wrapper-edges, medium);
 
@@ -180,5 +174,14 @@
     @include breakpoint("<=large") {
       padding-top: 20.67px;
     }
+  }
+}
+
+.contact-inner {
+  display: flex;
+  width: 100%;
+
+  @include breakpoint("<=small") {
+    flex-direction: column;
   }
 }

@@ -32,7 +32,6 @@ a {
     "transition",
     "color #{_duration(transition)} ease-in-out, border-bottom-color #{_duration(transition)} ease-in-out"
   );
-  border-bottom: dotted 1px _palette(fg-light);
   color: _palette(fg-bold);
   text-decoration: none;
 
@@ -150,13 +149,13 @@ h6 {
     @include set-vw(padding-bottom, 70px);
     color: _palette(blue);
 
-    @include breakpoint("<=large") {
+    @include breakpoint("<=small") {
       font-size: 26px;
       line-height: 33px;
     }
   }
 
-  @include breakpoint("<=large") {
+  @include breakpoint("<=small") {
     text-shadow: 0px 0.586px 1.173px rgba(0, 0, 0, 0.25);
     font-size: 26px;
     font-style: normal;
@@ -303,6 +302,7 @@ span.additional {
 .additional-text {
   color: #484848;
   text-align: center;
+  font-weight: 600;
   @include set-vw(padding-bottom, 72px);
   @include set-vw(font-size, 32px);
 

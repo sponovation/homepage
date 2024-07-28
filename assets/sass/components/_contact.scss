@@ -10,28 +10,39 @@ ul.contact {
   list-style: none;
   @include set-vw(padding-top, 35.5px);
 
+  .contact-icon {
+    display: flex;
+    gap: 11px;
+
+    @include breakpoint("<=small") {
+      align-items: center;
+    }
+  }
+
   li {
     @include icon;
-    margin: (_size(element-margin) * 1.25) 0 0 0;
-    padding: 0 0 0 3.25em;
+    @include set-vw(padding-top, 57px);
     position: relative;
-
-    &:before {
-      border-radius: 100%;
-      background-color: #fff;
-      display: inline-block;
-      font-size: 0.8em;
-      height: 2.5em;
-      left: 0;
-      line-height: 2.35em;
-      position: absolute;
-      text-align: center;
-      top: 0;
-      width: 2.5em;
-    }
 
     &:first-child {
       margin-top: 0;
+    }
+
+    a {
+      margin-top: 10px;
+      @include breakpoint("<=small") {
+        margin-top: 0;
+      }
+    }
+
+    .icon-img {
+      width: 50px;
+      height: 50px;
+
+      @include breakpoint("<=small") {
+        width: 55px;
+        height: 55px;
+      }
     }
   }
 

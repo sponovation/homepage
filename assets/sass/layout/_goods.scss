@@ -81,3 +81,7 @@
       cover no-repeat;
   }
 }
+
+#made-text {
+  @include set-vw(padding-top, 229.56px);
+}

@@ -18,13 +18,13 @@ form {
 
     @include vendor("display", "flex");
     @include vendor("flex-wrap", "wrap");
-    width: calc(100% + #{$gutter * 2});
-    margin: 0 0 _size(element-margin) ($gutter * -1);
+    width: 100%;
+    margin: 0 0 _size(element-margin) 0;
 
     > .field {
       @include vendor("flex-grow", "0");
       @include vendor("flex-shrink", "0");
-      padding: $gutter 0 0 $gutter;
+      @include set-vw(padding-top, 22px);
       width: calc(100% - #{$gutter * 1});
 
       &.half {
@@ -46,7 +46,7 @@ form {
       $gutter: (_size(element-margin) * 0.75);
 
       width: calc(100% + #{$gutter * 2});
-      margin: ($gutter * -1) 0 _size(element-margin) ($gutter * -1);
+      margin: -0.9em 0 _size(element-margin) ($gutter * -1);
 
       > .field {
         padding: $gutter 0 0 $gutter;
@@ -73,9 +73,8 @@ label {
   display: block;
   font-family: _font(family-heading);
   font-size: 0.8em;
-  font-weight: _font(weight-heading-bold);
+  font-weight: 600;
   letter-spacing: _font(kern-heading);
-  margin: 0 0 (_size(element-margin) * 0.35) 0;
   text-transform: uppercase;
 }
 
@@ -137,7 +136,11 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 select {
-  height: _size(element-height);
+  @include set-vw(height, 62px);
+
+  @include breakpoint("<=medium") {
+    height: 54px;
+  }
 }
 
 textarea {

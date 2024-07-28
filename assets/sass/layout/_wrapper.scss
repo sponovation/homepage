@@ -126,10 +126,7 @@
     @include set-vw(padding-left, 207px);
 
     @include breakpoint("<=medium") {
-      @include set-vw(padding-top, 27px, 480);
-      @include set-vw(padding-left, 21px, 480);
-      @include set-vw(padding-bottom, 69.66px,480);
-      @include set-vw(padding-right, 21px, 480);
+      padding: 27px 21px 69.66px 21px;
     }
   }
 
@@ -146,14 +143,11 @@
       @include vendor("align-items", "center");
       @include vendor("flex-direction", "row");
       @include set-vw(gap, 45px);
-
-      
     }
 
     .image {
       border-radius: 100%;
-      margin: 0 _size(section-spacing, large) _size(element-margin) 0;
-      width: 22em;
+      width: 401.5px;
       overflow: hidden;
       -ms-flex: 1;
 
@@ -200,19 +194,6 @@
     .inner {
       width: 100%;
     }
-
-    &.spotlight {
-      .image {
-        margin: 0 _size(section-spacing, medium) _size(element-margin) 0;
-        width: 32em;
-      }
-
-      &:nth-child(2n - 1) {
-        .image {
-          margin: 0 0 _size(element-margin) _size(section-spacing, medium);
-        }
-      }
-    }
   }
 
   @include breakpoint("<=small") {
@@ -236,14 +217,8 @@
       }
 
       .image {
-        width: 19em;
-        margin: 0 _size(section-spacing, small) _size(element-margin) 0;
-      }
-
-      &:nth-child(2n - 1) {
-        .image {
-          margin: 0 0 _size(element-margin) _size(section-spacing, small);
-        }
+        width: 21em;
+        margin: _size(section-spacing, small) 0 0 0;
       }
     }
   }
@@ -299,12 +274,20 @@
 .text-hr {
   display: flex;
   @include set-vw(gap, 51px);
+
+  @include breakpoint("<=xsmall") {
+    flex-direction: column;
+  }
 }
 
 .text-hr .hr {
   flex: 1 1 auto;
   border-bottom: 1px solid _palette(blue);
-  margin-bottom: 4px;
+  margin-bottom: 0.15em;
+
+  @include breakpoint("<=xsmall") {
+    width: 60%;
+  }
 }
 
 .media {
@@ -345,7 +328,7 @@
       font-size: 26px;
     }
 
-    @include breakpoint("<=xsmall") {
+    @include breakpoint("<=large") {
       // @include set-vw(font-size, 26px, 480);
       width: 200px;
     }
@@ -368,7 +351,7 @@
     @include set-vw(letter-spacing, -0.6px);
     vertical-align: bottom;
 
-    @include breakpoint("<=large") {
+    @include breakpoint("<=small") {
       // @include set-vw(font-size, 26px, 480);
       font-size: 15px;
     }
@@ -385,7 +368,7 @@
 
   @include breakpoint("<=xsmall") {
     display: block;
-  }  
+  }
 }
 
 #rectangle-image1 {
