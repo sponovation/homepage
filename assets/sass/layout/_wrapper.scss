@@ -125,7 +125,7 @@
     @include set-vw(padding-bottom, 164px);
     @include set-vw(padding-left, 207px);
 
-    @include breakpoint("<=medium") {
+    @include breakpoint("<=small") {
       padding: 27px 21px 69.66px 21px;
     }
   }
@@ -146,6 +146,7 @@
     }
 
     .image {
+
       border-radius: 100%;
       width: 401.5px;
       overflow: hidden;
@@ -247,22 +248,31 @@
 
 .linear-button {
   display: flex;
-  width: 717px;
-  height: 146px;
+  @include set-vw(width, 717px);
+  @include set-vw(height, 146px);
+
+  @include set-vw(margin-bottom, 230px);
   flex-shrink: 0;
   border-radius: 15px;
   background: linear-gradient(90deg, #00c2ff 0%, #5256cd 100%);
   justify-content: center;
   align-items: center;
+
+   @include breakpoint("<=xsmall") {
+      width: 100%;
+      height: 65.364px;
+      border-radius: 9.114px;
+  }
+
 }
 
 .linear-button span {
   color: #fff;
   text-align: center;
-  font-size: 5rem;
+  @include set-vw(font-size, 50px);
+  @include set-vw(line-height, 87px);
   font-style: normal;
   font-weight: 800;
-  line-height: 8.7rem; /* 174% */
 }
 
 .wrapper.linear .inner {
@@ -338,9 +348,15 @@
 .line-text {
   display: flex;
 
+
+  @include breakpoint("<=small") {
+    // @include set-vw(font-size, 26px, 480);
+    flex-direction: column;
+  }
+
   .line {
     border-bottom: 1px solid white;
-    flex: 1 1 auto;
+    flex: 1 2 auto;
     margin-bottom: 0.15em;
     margin-left: 40px;
     text-align: end;
@@ -354,6 +370,18 @@
     @include breakpoint("<=small") {
       // @include set-vw(font-size, 26px, 480);
       font-size: 15px;
+      display: none;
+    }
+  }
+
+  .line-full{
+    width: 90%;
+    border-bottom: 0.5px solid white;
+    padding-top: 17px;
+    display: none;
+    
+    @include breakpoint("<=small") {
+      display: block;
     }
   }
 }
@@ -385,4 +413,21 @@
 
 #rectangle-image4 {
   background-image: url(../../../images/index/small-4.png);
+}
+
+#line-small {
+  color: rgba(255, 255, 255, 0.60);
+  font-family: Pretendard;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  padding-bottom: 4px;
+  display: none;
+
+  
+  @include breakpoint("<=small") {
+    display: block;
+  }
 }

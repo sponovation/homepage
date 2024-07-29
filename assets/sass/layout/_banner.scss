@@ -7,7 +7,11 @@
 /* Banner */
 
 #banner {
-  @include padding(10em, 0, (0, 0, _size(wrapper-edges, large) * -0.5, 0));
+  // @include padding(10em, 0, (0, 0, _size(wrapper-edges, large) * -0.5, 0));
+  @include set-vw(padding-top, 333px);
+  @include set-vw(padding-right, 209.73px);
+  @include set-vw(padding-bottom, 201px);
+  @include set-vw(padding-left, 210.73px);
 
   .inner {
     margin: 0 auto;
