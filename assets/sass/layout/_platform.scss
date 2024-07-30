@@ -1,6 +1,5 @@
 #platform {
-  .inner {
-    max-width: 1920px;
+  .content {
     @include set-vw(padding-left, 139px);
     @include set-vw(padding-right, 138px);
   }
@@ -8,9 +7,9 @@
 
 .platform-boxes {
   @include set-vw(padding-bottom, 74.56px);
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   width: 100%;
-  flex-wrap: wrap;
   @include set-vw(gap, 28.67px);
 
   @include breakpoint("<=xsmall") {

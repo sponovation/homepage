@@ -10,18 +10,25 @@
 /// @param {string} $color Color.
 #wrapper {
   > header {
-    @include padding(
-      7.5em,
-      0,
-      (3.5em, 0, _size(wrapper-edges, large) * -0.5, 0)
-    );
+    // @include padding(
+    //   7.5em,
+    //   0,
+    //   (3.5em, 0, _size(wrapper-edges, large) * -0.5, 0)
+    // );
+    margin: 0 auto;
+    @include set-vw(padding-top, 333px);
+    @include set-vw(padding-right, 209.73px);
+    @include set-vw(padding-bottom, 201px);
+    @include set-vw(padding-left, 210.73px);
+
+    @include breakpoint("<=xsmall") {
+      padding-top: 115px;
+      padding-left: 21px;
+    }
 
     .inner {
+      max-width: 1499.54px;
       margin: 0 auto;
-      max-width: 1920px;
-      @include set-vw(padding-left, 210.73px);
-      @include set-vw(padding-bottom, 201px);
-      @include set-vw(padding-top, 193px);
     }
 
     p {
@@ -33,6 +40,7 @@
       @include set-vw(padding-top, 67px);
       @include set-vw(max-width, 1199px);
 
+
       @include breakpoint("<=large") {
         text-align: justify;
         font-size: 15px;
@@ -40,61 +48,6 @@
         font-style: normal;
         font-weight: 600;
       }
-    }
-  }
-
-  @include breakpoint("<=large") {
-    > header {
-      @include padding(5em, 0, (4em, 0, _size(wrapper-edges, large) * 0.5, 0));
-
-      background-color: _palette(bg);
-
-      background-image: linear-gradient(
-          to top,
-          transparentize(_palette(bg), 0.2),
-          transparentize(_palette(bg), 0.2)
-        ),
-        url("../../images/bg.jpg");
-
-      background-size: auto, cover;
-
-      background-position: center, 0% 30%;
-
-      margin-bottom: (_size(wrapper-edges, large) * -1);
-    }
-  }
-
-  @include breakpoint("<=medium") {
-    > header {
-      @include padding(
-        7em,
-        3em,
-        (4em, 0, _size(wrapper-edges, medium) * 0.5, 0)
-      );
-
-      background-size: auto, cover;
-
-      background-position: center, 0% 0%;
-
-      margin-bottom: (_size(wrapper-edges, medium) * -1);
-
-      .inner {
-        width: 100%;
-      }
-    }
-  }
-
-  @include breakpoint("<=small") {
-    > header {
-      @include padding(
-        3.75em,
-        2em,
-        (2.75em, 0, _size(wrapper-edges, small) * 0.5, 0)
-      );
-
-      background-size: auto, 125%;
-
-      margin-bottom: (_size(wrapper-edges, small) * -1);
     }
   }
 }
@@ -246,11 +199,6 @@
     }
   }
 
-  @include breakpoint("<=xxsmall") {
-    .inner {
-      @include padding(2em, 1.5em);
-    }
-  }
 }
 
 .linear-button {
@@ -260,7 +208,7 @@
 
   @include set-vw(margin-bottom, 230px);
   flex-shrink: 0;
-  border-radius: 15px;
+  @include set-vw(border-radius, 15px);
   background: linear-gradient(90deg, #00c2ff 0%, #5256cd 100%);
   justify-content: center;
   align-items: center;
@@ -280,6 +228,11 @@
   @include set-vw(line-height, 87px);
   font-style: normal;
   font-weight: 800;
+
+  @include breakpoint("<=xsmall") {
+    font-size: 20px;
+    line-height: 38.95px;
+  }
 }
 
 .wrapper.linear .inner {
@@ -321,12 +274,13 @@
     @include breakpoint("<=large") {
       // @include set-vw(font-size, 26px, 480);
       font-size: 26px;
+      line-height: 44px;
       border-bottom: 1px solid _palette(blue);
     }
 
     @include breakpoint("<=xsmall") {
       // @include set-vw(font-size, 26px, 480);
-      width: 200px;
+      width: 60%;
     }
   }
 }
@@ -354,11 +308,13 @@
 
 .line-text {
   display: flex;
+  align-items: flex-end;
 
 
   @include breakpoint("<=small") {
     // @include set-vw(font-size, 26px, 480);
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .line {
@@ -368,11 +324,13 @@
     margin-left: 40px;
     text-align: end;
     @include set-vw(font-size, 30px);
+    @include set-vw(height, 70px);
     color: rgba(255, 255, 255, 0.6);
     font-style: normal;
     font-weight: 800;
     @include set-vw(letter-spacing, -0.6px);
     vertical-align: bottom;
+    
 
     @include breakpoint("<=small") {
       // @include set-vw(font-size, 26px, 480);

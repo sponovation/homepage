@@ -68,7 +68,7 @@
     }
 }
 
-#event {
+
     .comming-soon{
         @include set-vw(width, 1642px);
         @include set-vw(height, 349px);
@@ -93,4 +93,3 @@
             @include set-vw(height, 44px);
         }
     }
-}

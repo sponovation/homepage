@@ -7,6 +7,7 @@
 /* Header */
 
 #header {
+
   @include vendor(
     "transition",
     "background-color #{_duration(transition)} ease-in-out"
@@ -26,10 +27,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 
   @include breakpoint("<=medium") {
     padding: 25px 21px;
   }
+
+  #logo-header {
+    @include set-vw(width, 244.892px);
+    @include set-vw(height, 40.815px);
+    background: url(../../../images/icon/logo-header-blue.svg) no-repeat center center;
+    background-size: contain;
+    min-width: 150px;
+    min-height: 25px;
+  }
+
 
   a {
     border-bottom: 0;
@@ -70,9 +82,19 @@
     a {
       color: #4b4b4b;
       display: inline-block;
+      font-weight: 600;
       border-bottom: 0;
       white-space: nowrap;
       // padding: 0 1em;
+      position: relative;
+      
+      .line {
+        position: absolute;
+        width: 130%;
+        border-bottom: 4px solid #2B2E83;
+        top: 1.5em;
+        left: -20px;
+      }
 
       &:before {
         float: right;
@@ -88,6 +110,15 @@
         // border-radius: _size(border-radius);
         // box-shadow: inset 0 0 0 2px _palette(border);
         // padding: 0 1.35em;
+        visibility: hidden;
+        width: 39px;
+        height: 25.629px;
+        background: url(../../../images/icon/menu-blue.svg) no-repeat center center;
+        background-size: contain;
+
+
+        @include breakpoint("<=medium") {visibility: visible
+          ;}
 
         &:hover {
           background-color: _palette(border-bg);
@@ -101,10 +132,31 @@
   }
 
   &.alt {
-    background-color: white;
+    background-color: transparent;
 
     @include breakpoint("<=medium") {
-      background-color: transparent;
+    }
+
+    #logo-header {
+      @include set-vw(width, 244.892px);
+      @include set-vw(height, 40.815px);
+      min-width: 150px;
+      min-height: 25px;
+      background: url(../../../images/icon/logo-header-white.svg) no-repeat center center;
+      background-size: contain;
+    }
+
+
+
+    nav {
+      a {
+        color: white;
+
+        &[href="#menu"] {
+          background: url(../../../images/icon/menu-white.svg) no-repeat center center;
+          background-size: contain;
+        }
+      }
     }
 
     h1 {
