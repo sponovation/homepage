@@ -42,7 +42,8 @@ a {
 
   &.special:not(.button) {
     border-bottom: 0;
-    display: block;
+    display: flex;
+    align-items: center;
     font-family: _font(family-heading);
     @include set-vw(font-size, 25px);
     font-size: 25px;
@@ -71,13 +72,18 @@ a {
       content: "";
       display: inline-block;
       font-size: 1.25em;
-      height: 2em;
       line-height: 1.75em;
-      margin-right: 0.85em;
+      @include set-vw(margin-right, 14px); 
       text-align: center;
       text-indent: 0.15em;
       vertical-align: middle;
-      width: 2em;
+      @include set-vw(width, 76px);
+      @include set-vw(height, 76px);
+
+      @include breakpoint("<=large") {
+        width: 48.336px;
+        height: 48.336px;
+      }
     }
 
     &:hover {

@@ -125,7 +125,7 @@
     @include set-vw(padding-bottom, 164px);
     @include set-vw(padding-left, 207px);
 
-    @include breakpoint("<=small") {
+    @include breakpoint("<=xsmall") {
       padding: 27px 21px 69.66px 21px;
     }
   }
@@ -175,6 +175,13 @@
         background-color: $color;
       }
     }
+  }
+
+  &.media {
+    a {
+      color: _palette(blue);
+    }
+    
   }
 
   @include breakpoint("<=medium") {

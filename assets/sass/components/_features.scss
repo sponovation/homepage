@@ -7,59 +7,70 @@
 /* Features */
 
 .features {
-  @include vendor("display", "flex");
-  @include vendor("flex-wrap", "wrap");
-  margin: 0 0 _size(element-margin) 0;
+  display: flex;
+  @include set-vw(gap, 46px);
+  @include set-vw(margin-top, 56px);
 
   article {
-    @include padding(1.75em, 1.75em);
-    background-color: desaturate(lighten(_palette(bg), 3), 1.5);
-    border-radius: _size(border-radius);
-    margin: (_size(section-spacing, large) * 0.5) _size(section-spacing, large)
-      (_size(section-spacing, large) * 0.5) 0;
-    width: calc(50% - #{_size(section-spacing, large) * 0.5});
+    .text-box {
+      @include set-vw(padding-left, 45px);
+      @include set-vw(padding-right, 45px);
+      @include set-vw(padding-bottom, 29px);
+      @include set-vw(padding-top, 59px);
+      background: #F1F8FF;
+      @include set-vw(width, 730px);
+      @include set-vw(border-radius, 24px); 
+      // margin-top: -20px;
+      @include set-vw(margin-top, -30px);
 
-    &:nth-child(2n) {
-      margin-right: 0;
+      @include breakpoint("<=xsmall") {
+        width: 100%;
+        height: 60%;
+        padding-top: 30px;
+      }
     }
 
+
     .image {
-      border-radius: _size(border-radius) _size(border-radius) 0 0;
-      display: block;
-      margin-bottom: 1.75em;
-      margin-left: -1.75em;
-      margin-top: -1.75em;
-      position: relative;
-      width: calc(100% + #{3.5em});
+      @include set-vw(border-top-left-radius, 24px);
+      @include set-vw(border-top-right-radius, 24px);
+      @include set-vw(width, 730px);
+      @include set-vw(height, 399px);
+
+      @include breakpoint("<=xsmall") {
+        width: 100%;
+        height: 60%;
+      }
 
       img {
         border-radius: _size(border-radius) _size(border-radius) 0 0;
-        width: 100%;
+        @include set-vw(width, 730px);
+        @include set-vw(height, 399px);
+
+        @include breakpoint("<=xsmall") {
+          width: 100%;
+          height: 60%;
+        }
       }
     }
-  }
 
-  @include breakpoint("<=medium") {
-    article {
-      margin: (_size(section-spacing, medium) * 0.5)
-        _size(section-spacing, medium) (_size(section-spacing, medium) * 0.5) 0;
-      width: calc(50% - #{_size(section-spacing, medium) * 0.5});
-    }
-  }
 
-  @include breakpoint("<=small") {
-    article {
-      @include padding(1.5em, 1.5em);
-      margin: (_size(section-spacing, small) * 0.5)
-        _size(section-spacing, small) (_size(section-spacing, small) * 0.5) 0;
-      width: calc(50% - #{_size(section-spacing, small) * 0.5} - 1px);
+    h3 {
+      @include set-vw(font-size, 30px);    
+      @include set-vw(line-height, 40px);    
+      @include set-vw(padding-bottom, 34px);    
+      text-align: start;
 
-      .image {
-        margin-bottom: 1.5em;
-        margin-left: -1.5em;
-        margin-top: -1.5em;
-        width: calc(100% + #{3em});
+      @include breakpoint("<=medium") {
+        font-size: 18px;
+        line-height: 20px
+        
       }
+
+    }
+
+    @include breakpoint("<=xsmall") {
+      width: 100%;
     }
   }
 

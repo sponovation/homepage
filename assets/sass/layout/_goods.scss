@@ -34,6 +34,8 @@
     @include breakpoint("<=xsmall") {
       width: 153.598px;
       height: 153.598px;
+      // width: 50%;
+      // height: 100%;
       flex-shrink: 0;
       display: flex;
       justify-content: center;
@@ -68,6 +70,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   @include set-vw(gap, 28.67px);
+  justify-content: center;
 
   @include breakpoint("<=xsmall") {
     gap: 10px;
@@ -79,6 +82,7 @@
     @include set-vw(height, 349.441px);
     background: url(../../../images/goods/made/rectangle-28.png) lightgray 50% /
       cover no-repeat;
+
   }
 }
 
