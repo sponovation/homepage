@@ -28,6 +28,7 @@ p {
 }
 
 a {
+  word-break: break-word;
   @include vendor(
     "transition",
     "color #{_duration(transition)} ease-in-out, border-bottom-color #{_duration(transition)} ease-in-out"
@@ -73,7 +74,7 @@ a {
       display: inline-block;
       font-size: 1.25em;
       line-height: 1.75em;
-      @include set-vw(margin-right, 14px); 
+      @include set-vw(margin-right, 14px);
       text-align: center;
       text-indent: 0.15em;
       vertical-align: middle;

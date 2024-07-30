@@ -41,7 +41,7 @@ body {
 
   background-image: url("../../images/index/bg.png");
 
-  background-size: cover;
+  background-size: auto, cover;
 
   background-repeat: no-repeat;
 
@@ -74,4 +74,5 @@ body {
 
 #management {
   background-image: url("../../images/management/bg.png");
+  // background-size: contain;
 }
