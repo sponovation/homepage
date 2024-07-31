@@ -199,7 +199,7 @@ p {
 }
 
 a {
-  word-break: break-word;
+  word-break: break-all;
   -moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   -webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
@@ -414,7 +414,6 @@ h6.major.title {
   h4,
   h5,
   h6 {
-    text-shadow: 0px 0.586px 1.173px rgba(0, 0, 0, 0.25);
     font-size: 26px;
     font-style: normal;
     font-weight: 800;
@@ -2935,11 +2934,9 @@ button:disabled,
   padding-right: 21px;
   position: fixed;
   top: 0;
-  width: 100%;
   z-index: 10000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
+  backdrop-filter: blur(50px);
 }
 @media (max-width: 1920px) {
   #header {
@@ -2954,6 +2951,18 @@ button:disabled,
 @media (max-width: 1920px) {
   #header {
     padding-left: 5.0057291667vw;
+  }
+}
+#header .header-wrapper {
+  width: 1727px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1920px) {
+  #header .header-wrapper {
+    width: 89.9479166667vw;
   }
 }
 @media screen and (max-width: 980px) {
@@ -3028,6 +3037,43 @@ button:disabled,
   border-bottom: 0;
   white-space: nowrap;
   position: relative;
+}
+#header nav a .border-line {
+  position: absolute;
+  width: 120%;
+  top: 59px;
+  left: -10px;
+  border-bottom: 4px solid #2B2E83;
+}
+@media (max-width: 1920px) {
+  #header nav a .border-line {
+    top: 3.0729166667vw;
+  }
+}
+@media screen and (max-width: 1680px) {
+  #header nav a .border-line {
+    top: 3vw;
+  }
+}
+@media screen and (max-width: 1280px) {
+  #header nav a .border-line {
+    top: 70px;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 1920px) {
+  #header nav a .border-line {
+    top: 3.6458333333vw;
+  }
+}
+@media screen and (max-width: 980px) {
+  #header nav a .border-line {
+    top: 75px;
+  }
+}
+@media screen and (max-width: 980px) and (max-width: 1920px) {
+  #header nav a .border-line {
+    top: 3.90625vw;
+  }
 }
 #header nav a.active {
   color: #2B2E83;
@@ -3118,7 +3164,7 @@ button:disabled,
 }
 @media screen and (max-width: 480px) {
   #header nav a[href="#menu"] {
-    width: 4em;
+    vertical-align: bottom;
     white-space: nowrap;
     position: relative;
   }
@@ -3281,7 +3327,7 @@ button:disabled,
   border: 0;
   display: block;
   font-family: "Pretendard Variable", Pretendard, Raleway, Helvetica, sans-serif;
-  font-size: 0.8em;
+  font-size: 16px;
   font-weight: 200;
   letter-spacing: 0.1em;
   line-height: 1.85em;
