@@ -8,15 +8,20 @@
 
 #footer {
   .inner {
-    @include set-vw(padding-left, 211px);
-    @include set-vw(padding-right, 211.5px);
-    @include set-vw(padding-top, 113px);
-    @include set-vw(padding-bottom, 180px);
     @include vendor("display", "flex");
     @include vendor("flex-direction", "row");
     @include vendor("flex-wrap", "wrap");
     margin: 0 auto;
-    width: 100%;
+    max-width: 1920px;
+    @include set-vw(padding-top, 165px);
+    @include set-vw(padding-right, 207px);
+    @include set-vw(padding-bottom, 164px);
+    @include set-vw(padding-left, 207px);
+
+    @include breakpoint("<=xsmall") {
+      padding: 27px 21px 69.66px 21px;
+    }
+
 
     > * {
       width: 100%;
@@ -52,18 +57,18 @@
     }
   }
 
-  @include breakpoint("<=large") {
-    background-color: _palette(bg);
+  // @include breakpoint("<=large") {
+  //   background-color: _palette(bg);
 
-    background-image: url("../../images/management/bg.png");
+  //   background-image: url("../../images/management/bg.png");
 
-    background-size: auto, cover;
+  //   background-size: auto, cover;
 
-    background-position: center, center;
+  //   background-position: center, center;
 
-    margin-top: (_size(wrapper-edges, large) * -1);
-    padding-top: _size(wrapper-edges, large);
-  }
+  //   margin-top: (_size(wrapper-edges, large) * -1);
+  //   padding-top: _size(wrapper-edges, large);
+  // }
 
   @include breakpoint("<=small") {
     margin-top: (_size(wrapper-edges, medium) * -1);
@@ -102,7 +107,7 @@
       }
 
       .contact {
-        margin: 0 0 (_size(element-margin) * 1.5) 0;
+        margin: 0 0 72px 0;
       }
     }
   }
@@ -175,8 +180,11 @@
 .contact-inner {
   display: flex;
   width: 100%;
+  @include set-vw(gap, 120px);
+
 
   @include breakpoint("<=small") {
     flex-direction: column;
+    @include set-vw(gap, 0px);
   }
 }

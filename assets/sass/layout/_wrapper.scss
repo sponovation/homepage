@@ -21,7 +21,10 @@
     @include set-vw(padding-bottom, 201px);
     @include set-vw(padding-left, 210.73px);
 
+    @include set-vw(min-height, 1100px);
+
     @include breakpoint("<=xsmall") {
+      min-height: 567px;
       padding-top: 115px;
       padding-left: 21px;
     }
@@ -260,30 +263,46 @@
   }
 }
 
-.media {
-  background: #fff;
+  .media {
+    background: #fff;
+    h2 {
+      border-bottom: 1.5px solid _palette(blue);
+      color: #2b2e83;
 
-  h2 {
-    @include set-vw(font-size, 40px);
-    @include set-vw(line-height, 87px);
-    color: #2b2e83;
-    font-style: normal;
-    font-weight: 800;
-    border-bottom: 1.5px solid _palette(blue);
-
-    @include breakpoint("<=large") {
-      // @include set-vw(font-size, 26px, 480);
-      font-size: 26px;
-      line-height: 44px;
-      border-bottom: 1px solid _palette(blue);
-    }
-
-    @include breakpoint("<=xsmall") {
-      // @include set-vw(font-size, 26px, 480);
-      width: 60%;
+      @include breakpoint("<=large") {
+        // @include set-vw(font-size, 26px, 480);
+        border-bottom: 1px solid _palette(blue);
+      }
     }
   }
-}
+
+  #contact {
+    h2 {
+      border-bottom: 1px solid _palette(white);
+    }
+  }
+
+  .media, #contact {
+    h2 {
+      @include set-vw(font-size, 40px);
+      @include set-vw(line-height, 87px);
+      font-style: normal;
+      font-weight: 800;
+      
+
+      @include breakpoint("<=large") {
+        // @include set-vw(font-size, 26px, 480);
+        font-size: 26px;
+        line-height: 44px;
+    }
+
+      @include breakpoint("<=xsmall") {
+        // @include set-vw(font-size, 26px, 480);
+        width: 60%;
+      }
+    }
+  }
+
 
 .footer {
   .h2 {

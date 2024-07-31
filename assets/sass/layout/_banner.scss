@@ -13,7 +13,10 @@
   @include set-vw(padding-bottom, 201px);
   @include set-vw(padding-left, 210.73px);
 
+  @include set-vw(min-height, 948px);
+
 @include breakpoint("<=xsmall") {
+  min-height: 567px;
   padding-top: 115px;
   padding-left: 21px;
 }

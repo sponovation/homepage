@@ -9,7 +9,6 @@
   @include set-vw(padding-bottom, 74.56px);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 100%;
   @include set-vw(gap, 28.67px);
 
   @include breakpoint("<=xsmall") {

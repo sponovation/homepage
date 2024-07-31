@@ -88,6 +88,7 @@
       position: relative;
 
       .line {
+
         position: absolute;
         width: 130%;
         border-bottom: 4px solid #2b2e83;
@@ -133,6 +134,7 @@
 
   &.alt {
     background-color: transparent;
+    box-shadow: none;
 
     @include breakpoint("<=medium") {
     }

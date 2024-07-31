@@ -312,12 +312,29 @@ span.additional {
   font-weight: 600;
   @include set-vw(padding-bottom, 72px);
   @include set-vw(font-size, 32px);
+  @include set-vw(line-height, 45px);
 
   @include breakpoint("<=large") {
     font-size: 15px;
+    line-height: 21px;
   }
 
   @include breakpoint("<=xsmall") {
     padding-bottom: 31px;
   }
 }
+
+.pc_only {
+  @include breakpoint("<=xsmall") {
+    display: none;
+  }
+}
+
+
+.mobile_only {
+  display: none;
+  @include breakpoint("<=xsmall") {
+    display: block;
+  }
+}
+
