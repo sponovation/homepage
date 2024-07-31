@@ -140,6 +140,17 @@ body.is-preload *:after {
   background-size: cover;
 }
 
+body::after {
+  /* 소스만 다운받고 화면은 나태내지 않는다. (숨김 처리) */
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  /* load images */
+  content: url(../../images/platform/bg.png) url(../../images/goods/bg.png) url(../../images/event/bg.png) url(../../images/management/bg.png); /* 필요한 이미지 소스들 다운 */
+}
+
 /* Type */
 html {
   font-size: 10px; /* 기본 설정: 1rem = 10px */
