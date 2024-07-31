@@ -27,7 +27,7 @@
       border-radius: 15px;
       @include set-vw(padding-left, 59px);
       @include set-vw(padding-top, 42px);
-      background: url(../../../images/goods/rectangle-2.png) lightgray 50% / cover
+      background: url(../../images/goods/rectangle-2.png) 50% / cover
         no-repeat;
   
       @include breakpoint("<=xsmall") {
@@ -37,7 +37,7 @@
         justify-content: center;
         align-items: center;
   
-        background: url(../../../images/goods/small-2.png) lightgray 50% / cover
+        background: url(../../images/goods/small-2.png) 50% / cover
           no-repeat;
       }
     }
@@ -90,7 +90,7 @@
       @include set-vw(border-radius, 15px);
       @include set-vw(width, 528.329px);
       @include set-vw(height, 349.441px);
-      background: url(../../../images/goods/made/rectangle-28.png) lightgray 50% /
+      background: url(../../images/goods/made/rectangle-28.png) lightgray 50% /
       cover no-repeat;
       
       
@@ -179,12 +179,14 @@
     @include set-vw(gap, 48px);
 
     @include breakpoint("<=xsmall") {
+      min-height: 97px;
       border-radius: 2.864px;
       font-size: 17px;
       line-height: 19.1px;
       width: 100%;
       box-shadow: 0px 0px 1.527px 0.573px rgba(125, 169, 255, 0.45);
       padding-top: 13px;
+      padding-bottom: 12px;
       padding-left: 19px;
     }
 
@@ -219,6 +221,7 @@
     @include breakpoint("<=xsmall") {
       border-radius: 7.812px;
       height: 99px;
+      
       width: 100%;
       display: flex;
     }

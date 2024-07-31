@@ -140,6 +140,17 @@ body.is-preload *:after {
   background-size: cover;
 }
 
+body::after {
+  /* 소스만 다운받고 화면은 나태내지 않는다. (숨김 처리) */
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  /* load images */
+  content: url(../../images/platform/bg.png) url(../../images/goods/bg.png) url(../../images/event/bg.png) url(../../images/management/bg.png); /* 필요한 이미지 소스들 다운 */
+}
+
 /* Type */
 html {
   font-size: 10px; /* 기본 설정: 1rem = 10px */
@@ -150,6 +161,7 @@ input,
 select,
 textarea,
 p {
+  word-break: keep-all;
   color: #000000;
   font-family: "Pretendard Variable", Pretendard, "Source Sans Pro", Helvetica, sans-serif;
   font-size: 24px;
@@ -196,8 +208,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  border-bottom-color: transparent;
-  color: #ffffff !important;
+  filter: brightness(110%);
 }
 a.special:not(.button) {
   border-bottom: 0;
@@ -2651,7 +2662,7 @@ input[type=reset]:hover,
 input[type=button]:hover,
 button:hover,
 .button:hover {
-  background-color: rgba(255, 255, 255, 0.025);
+  filter: brightness(110%);
 }
 input[type=submit]:active,
 input[type=reset]:active,
@@ -3017,6 +3028,9 @@ button:disabled,
   border-bottom: 0;
   white-space: nowrap;
   position: relative;
+}
+#header nav a.active {
+  color: #2B2E83;
 }
 #header nav a .line {
   position: absolute;
@@ -3423,14 +3437,6 @@ body.is-menu-visible #menu .inner {
   text-transform: uppercase;
   color: #FFFFFF;
 }
-@media screen and (max-width: 1280px) {
-  #banner {
-    background-color: #2e3141;
-    background-image: url("../../images/index/bg.png");
-    background-size: auto, cover;
-    background-position: center, center;
-  }
-}
 body.is-preload #banner .logo {
   -moz-transform: translateY(0.5em);
   -webkit-transform: translateY(0.5em);
@@ -3513,7 +3519,6 @@ body.is-preload #banner p {
   font-style: normal;
   font-weight: 600;
   padding-top: 67px;
-  max-width: 1199px;
 }
 @media (max-width: 1920px) {
   #wrapper > header p {
@@ -3528,11 +3533,6 @@ body.is-preload #banner p {
 @media (max-width: 1920px) {
   #wrapper > header p {
     padding-top: 3.4895833333vw;
-  }
-}
-@media (max-width: 1920px) {
-  #wrapper > header p {
-    max-width: 62.4479166667vw;
   }
 }
 @media screen and (max-width: 1280px) {
@@ -3889,7 +3889,7 @@ body.is-preload #banner p {
 .line-text .line {
   border-bottom: 1px solid white;
   flex: 1 2 auto;
-  margin-bottom: 0.15em;
+  margin-bottom: 0.2em;
   margin-left: 40px;
   text-align: end;
   font-size: 30px;
@@ -3948,19 +3948,19 @@ body.is-preload #banner p {
 }
 
 #rectangle-image1 {
-  background-image: url(../../../images/index/small-1.png);
+  background-image: url(../../images/index/small-1.png);
 }
 
 #rectangle-image2 {
-  background-image: url(../../../images/index/small-2.png);
+  background-image: url(../../images/index/small-2.png);
 }
 
 #rectangle-image3 {
-  background-image: url(../../../images/index/small-3.png);
+  background-image: url(../../images/index/small-3.png);
 }
 
 #rectangle-image4 {
-  background-image: url(../../../images/index/small-4.png);
+  background-image: url(../../images/index/small-4.png);
 }
 
 #line-small {
@@ -4148,6 +4148,11 @@ body.is-preload #banner p {
 .copyright .bold {
   font-weight: 600;
 }
+@media screen and (max-width: 480px) {
+  .copyright {
+    padding-bottom: 50px;
+  }
+}
 @media screen and (max-width: 1280px) {
   .copyright {
     padding-top: 36px;
@@ -4244,6 +4249,7 @@ body.is-preload #banner p {
 }
 @media screen and (max-width: 480px) {
   .platform-boxes {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 19px;
@@ -4421,7 +4427,7 @@ body.is-preload #banner p {
   border-radius: 15px;
   padding-left: 59px;
   padding-top: 42px;
-  background: url(../../../images/goods/rectangle-2.png) lightgray 50%/cover no-repeat;
+  background: url(../../images/goods/rectangle-2.png) 50%/cover no-repeat;
 }
 @media (max-width: 1920px) {
   #goods .goods-items .goods-item {
@@ -4450,7 +4456,7 @@ body.is-preload #banner p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(../../../images/goods/small-2.png) lightgray 50%/cover no-repeat;
+    background: url(../../images/goods/small-2.png) 50%/cover no-repeat;
   }
 }
 #goods .goods-items .goods-item-text {
@@ -4519,7 +4525,7 @@ body.is-preload #banner p {
   border-radius: 15px;
   width: 528.329px;
   height: 349.441px;
-  background: url(../../../images/goods/made/rectangle-28.png) lightgray 50%/cover no-repeat;
+  background: url(../../images/goods/made/rectangle-28.png) lightgray 50%/cover no-repeat;
 }
 @media (max-width: 1920px) {
   #goods .made-items .made-item-image {
@@ -4714,12 +4720,14 @@ body.is-preload #banner p {
 }
 @media screen and (max-width: 480px) {
   #goods .ask-box .order {
+    min-height: 97px;
     border-radius: 2.864px;
     font-size: 17px;
     line-height: 19.1px;
     width: 100%;
     box-shadow: 0px 0px 1.527px 0.573px rgba(125, 169, 255, 0.45);
     padding-top: 13px;
+    padding-bottom: 12px;
     padding-left: 19px;
   }
 }

@@ -12,6 +12,7 @@
   @include set-vw(gap, 28.67px);
 
   @include breakpoint("<=xsmall") {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 19px;

@@ -151,6 +151,9 @@
   .bold {
     font-weight: 600;
   }
+  @include breakpoint("<=xsmall") {
+    padding-bottom: 50px;
+  }
 
   @include breakpoint("<=large") {
     padding-top: 36px;

@@ -35,7 +35,7 @@ button,
   white-space: nowrap;
 
   &:hover {
-    background-color: _palette(border-bg);
+    filter: brightness(110%);
   }
 
   &:active {
