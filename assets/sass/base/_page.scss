@@ -36,16 +36,16 @@ html {
   box-sizing: inherit;
 }
 
-body {
+#index #banner,
+#index #footer {
   background-image: url("../../images/index/bg.png");
-  background-color: _palette(bg);
-  background-attachment: fixed, fixed;
   background-repeat: no-repeat;
-  background-position: center, center;
+  background-position: right;
+  background-size: cover;
 
-  &.after {
-    background-size: cover;
-  }
+  // &.after {
+  //   height: 50vw;
+  // }
 
   // Stops initial animations until page loads.
   &.is-preload {
@@ -58,9 +58,11 @@ body {
   }
 }
 
-#platform {
+#platform #banner,
+#platform #footer {
   background-image: url("../../images/platform/bg.png");
   background-position: right;
+  background-size: cover;
 
   // @include breakpoint("<=xsmall") {
   //   background-size: cover;
@@ -69,17 +71,31 @@ body {
   // }
 }
 
-#goods {
+#goods #banner,
+#goods #footer {
   background-image: url("../../images/goods/bg.png");
+  background-size: cover;
 }
 
-#event {
+#event #banner,
+#event #footer {
   background-image: url("../../images/event/bg.png");
+  background-position: center;
+  background-size: cover;
 }
 
 #management {
-  background-image: url("../../images/management/bg.png");
-  background-size: cover;
+  #banner {
+    background-image: url("../../images/management/bg.png");
+    background-size: cover;
+    background-position: left 30px;
+  }
+
+  #footer {
+    background-image: url("../../images/management/bg.png");
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 body::after {

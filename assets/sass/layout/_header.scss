@@ -134,6 +134,7 @@
       }
 
       &[href="#menu"] {
+        vertical-align: bottom;
         @include icon(false, solid);
         @include vendor(
           "transition",
