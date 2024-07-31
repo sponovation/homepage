@@ -2952,6 +2952,7 @@ button:disabled,
   z-index: 10000;
   width: 100%;
   backdrop-filter: blur(50px);
+  -webkit-backdrop-backdrop-filter: blur(50px);
 }
 @media (max-width: 1920px) {
   #header {
