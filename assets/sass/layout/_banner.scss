@@ -73,17 +73,17 @@
     color: _palette(white);
   }
 
-  @include breakpoint("<=large") {
-    background-color: _palette(bg);
+  // @include breakpoint("<=large") {
+  //   background-color: _palette(bg);
 
-    background-image: url("../../images/index/bg.png");
+  //   background-image: url("../../images/index/bg.png");
 
-    background-size: auto, cover;
+  //   background-size: auto, cover;
 
-    background-position: center, center;
+  //   background-position: center, center;
 
-    // margin-bottom: (_size(wrapper-edges, large) * -1);
-  }
+  //   // margin-bottom: (_size(wrapper-edges, large) * -1);
+  // }
 
 
   body.is-preload & {

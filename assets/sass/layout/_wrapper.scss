@@ -41,7 +41,7 @@
       font-style: normal;
       font-weight: 600;
       @include set-vw(padding-top, 67px);
-      @include set-vw(max-width, 1199px);
+      // @include set-vw(max-width, 1199px);
 
 
       @include breakpoint("<=large") {
@@ -339,7 +339,7 @@
   .line {
     border-bottom: 1px solid white;
     flex: 1 2 auto;
-    margin-bottom: 0.15em;
+    margin-bottom: 0.4em;
     margin-left: 40px;
     text-align: end;
     @include set-vw(font-size, 30px);
@@ -384,19 +384,19 @@
 }
 
 #rectangle-image1 {
-  background-image: url(../../../images/index/small-1.png);
+  background-image: url(../../images/index/small-1.png);
 }
 
 #rectangle-image2 {
-  background-image: url(../../../images/index/small-2.png);
+  background-image: url(../../images/index/small-2.png);
 }
 
 #rectangle-image3 {
-  background-image: url(../../../images/index/small-3.png);
+  background-image: url(../../images/index/small-3.png);
 }
 
 #rectangle-image4 {
-  background-image: url(../../../images/index/small-4.png);
+  background-image: url(../../images/index/small-4.png);
 }
 
 #line-small {
