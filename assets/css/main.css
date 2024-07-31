@@ -2934,12 +2934,9 @@ button:disabled,
   padding-right: 21px;
   position: fixed;
   top: 0;
-  width: 100%;
   z-index: 10000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  backdrop-filter: blur(20px);
+  width: 100%;
+  backdrop-filter: blur(50px);
 }
 @media (max-width: 1920px) {
   #header {
@@ -2954,6 +2951,18 @@ button:disabled,
 @media (max-width: 1920px) {
   #header {
     padding-left: 5.0057291667vw;
+  }
+}
+#header .header-wrapper {
+  width: 1727px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1920px) {
+  #header .header-wrapper {
+    width: 89.9479166667vw;
   }
 }
 @media screen and (max-width: 980px) {
