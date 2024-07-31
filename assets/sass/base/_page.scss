@@ -37,17 +37,15 @@ html {
 }
 
 body {
-  background-color: _palette(bg);
-
   background-image: url("../../images/index/bg.png");
-
-  background-size: cover;
-
-  background-repeat: no-repeat;
-
+  background-color: _palette(bg);
   background-attachment: fixed, fixed;
-
+  background-repeat: no-repeat;
   background-position: center, center;
+
+  &.after {
+    background-size: cover;
+  }
 
   // Stops initial animations until page loads.
   &.is-preload {
@@ -65,7 +63,7 @@ body {
   background-position: right;
 
   // @include breakpoint("<=xsmall") {
-  //   background-size: contain;
+  //   background-size: cover;
   //   background-position: center;
   //   background-image: url("../../images/platform/bg-mobile.png");
   // }
@@ -84,15 +82,15 @@ body {
   background-size: cover;
 }
 
+body::after {
+  /* 소스만 다운받고 화면은 나태내지 않는다. (숨김 처리) */
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
 
-body::after{
-	/* 소스만 다운받고 화면은 나태내지 않는다. (숨김 처리) */
-    position:absolute; 
-    width:0; 
-    height:0; 
-    overflow:hidden; 
-    z-index:-1;
-    
-    /* load images */
-    content:url(../../images/platform/bg.png) url(../../images/goods/bg.png) url(../../images/event/bg.png) url(../../images/management/bg.png); /* 필요한 이미지 소스들 다운 */
+  /* load images */
+  content: url(../../images/platform/bg.png) url(../../images/goods/bg.png)
+    url(../../images/event/bg.png) url(../../images/management/bg.png); /* 필요한 이미지 소스들 다운 */
 }

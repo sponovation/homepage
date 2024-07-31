@@ -102,12 +102,14 @@ html {
 }
 
 body {
-  background-color: #2e3141;
   background-image: url("../../images/index/bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: #2e3141;
   background-attachment: fixed, fixed;
+  background-repeat: no-repeat;
   background-position: center, center;
+}
+body.after {
+  background-size: cover;
 }
 body.is-preload *,
 body.is-preload *:before,
@@ -4276,6 +4278,14 @@ body.is-preload #banner p {
 @media (max-width: 1920px) {
   #platform .content {
     padding-right: 7.1875vw;
+  }
+}
+#platform .additional-text {
+  text-align: start;
+}
+@media screen and (max-width: 480px) {
+  #platform .additional-text {
+    text-align: center;
   }
 }
 
