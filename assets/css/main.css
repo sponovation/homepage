@@ -103,7 +103,7 @@ html {
 
 #index #banner,
 #index #footer {
-  background-image: url("../../images/index/bg.png");
+  background-image: url("../../images/index/bg.webp");
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
@@ -126,31 +126,31 @@ html {
 
 #platform #banner,
 #platform #footer {
-  background-image: url("../../images/platform/bg.png");
+  background-image: url("../../images/platform/bg.webp");
   background-position: right;
   background-size: cover;
 }
 
 #goods #banner,
 #goods #footer {
-  background-image: url("../../images/goods/bg.png");
+  background-image: url("../../images/goods/bg.webp");
   background-size: cover;
 }
 
 #event #banner,
 #event #footer {
-  background-image: url("../../images/event/bg.png");
+  background-image: url("../../images/event/bg.webp");
   background-position: center;
   background-size: cover;
 }
 
 #management #banner {
-  background-image: url("../../images/management/bg.png");
+  background-image: url("../../images/management/bg.webp");
   background-size: cover;
   background-position: left 30px;
 }
 #management #footer {
-  background-image: url("../../images/management/bg.png");
+  background-image: url("../../images/management/bg.webp");
   background-size: cover;
   background-position: center;
 }
@@ -163,7 +163,7 @@ body::after {
   overflow: hidden;
   z-index: -1;
   /* load images */
-  content: url(../../images/platform/bg.png) url(../../images/goods/bg.png) url(../../images/event/bg.png) url(../../images/management/bg.png); /* 필요한 이미지 소스들 다운 */
+  content: url(../../images/platform/bg.webp) url(../../images/goods/bg.webp) url(../../images/event/bg.webp) url(../../images/management/bg.webp); /* 필요한 이미지 소스들 다운 */
 }
 
 /* Type */
