@@ -4134,6 +4134,11 @@ body.is-preload #banner p {
 .copyright .bold {
   font-weight: 600;
 }
+@media screen and (max-width: 480px) {
+  .copyright {
+    padding-bottom: 50px;
+  }
+}
 @media screen and (max-width: 1280px) {
   .copyright {
     padding-top: 36px;
