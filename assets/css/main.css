@@ -2953,7 +2953,7 @@ button:disabled,
 #header #logo-header {
   width: 244.892px;
   height: 40.815px;
-  background-image: url("../../../images/icon/logo-header-blue.png");
+  background-image: url("../../images/icon/logo-header-blue.png");
   background-repeat: no-repeat;
   background-size: contain;
   min-width: 150px;
@@ -3038,7 +3038,7 @@ button:disabled,
   visibility: hidden;
   width: 39px;
   height: 25.629px;
-  background: url(../../../images/icon/menu-blue.svg) no-repeat center center;
+  background: url(../../images/icon/menu-blue.svg) no-repeat center center;
   background-size: contain;
 }
 #header nav a[href="#menu"]:before {
@@ -3073,7 +3073,7 @@ button:disabled,
   height: 40.815px;
   min-width: 150px;
   min-height: 25px;
-  background: url("../../../images/icon/logo-header-white.png") no-repeat center center;
+  background: url("../../images/icon/logo-header-white.png") no-repeat center center;
   background-size: contain;
 }
 @media (max-width: 1920px) {
@@ -3090,7 +3090,7 @@ button:disabled,
   color: white;
 }
 #header.alt nav a[href="#menu"] {
-  background: url("../../../images/icon/menu-white.svg") no-repeat center center;
+  background: url("../../images/icon/menu-white.svg") no-repeat center center;
   background-size: contain;
 }
 #header.alt h1 {
