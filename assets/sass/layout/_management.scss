@@ -1,0 +1,31 @@
+#player {
+    display: flex;
+    @include set-vw(gap, 23px);
+
+    .player-row {
+        display: flex;
+        @include set-vw(gap, 23px);
+    }
+    .player-img {
+        @include set-vw(width, 393px);
+        @include set-vw(height, 466px);
+    }
+
+    @include breakpoint("<=xsmall") {
+        display: none;
+    }
+}
+
+#player_mobile {
+    display: none;
+    @include set-vw(gap, 23px);
+    width: 100%;
+
+    .player-img {
+        width: 100%;
+    }
+    
+    @include breakpoint("<=xsmall") {
+        display: block;
+    }
+}

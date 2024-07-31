@@ -1,0 +1,86 @@
+#platform {
+  .content {
+    @include set-vw(padding-left, 139px);
+    @include set-vw(padding-right, 138px);
+  }
+}
+
+.platform-boxes {
+  @include set-vw(padding-bottom, 74.56px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @include set-vw(gap, 28.67px);
+
+  @include breakpoint("<=xsmall") {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+  }
+
+  .platform-box {
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 2px rgba(46, 155, 255, 0.45);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    @include set-vw(padding-top, 43px);
+    @include set-vw(padding-left, 59px);
+    @include set-vw(padding-right, 59px);
+    @include set-vw(padding-bottom, 37.44px);
+    @include set-vw(width, 528.329px);
+    @include set-vw(height, 349.441px);
+    @include set-vw(gap, 23px);
+
+    @include breakpoint("<=xsmall") {
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      padding-top: 22px;
+      height: 125px;
+      justify-content: space-between;
+      padding: 21px 30px 21px 26px;
+    }
+  }
+
+  .platform-text {
+    @include set-vw(font-size, 43px);
+    font-weight: 600;
+    color: #1c64d1;
+    @include set-vw(line-height, 49px);
+
+    @include breakpoint("<=xsmall") {
+      color: #1c64d1;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 25px; /* 125% */
+    }
+
+    .text-highlight {
+      font-weight: 800;
+    }
+  }
+
+  .platform-icon {
+    @include set-vw(width, 149px);
+    @include set-vw(height, 149px);
+    align-self: flex-end;
+
+    @include breakpoint("<=xsmall") {
+      width: 83px;
+      height: 83px;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.platform-h3 {
+  display: flex;
+  @include set-vw(margin-bottom, 18px);
+
+  @include breakpoint("<=xsmall") {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+}

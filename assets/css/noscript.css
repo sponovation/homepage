@@ -1,39 +1,42 @@
+@charset "UTF-8";
+/* 기준 화면 너비 */
+/* pixel을 vw로 변환해주는 함수 */
+/* 반응형이 일어날 화면 설정 */
+/* 화면 크기에 따라 크기를 알맞게 설정해주는 함수 */
 /*
 	Solid State by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
 /* Banner */
+body.is-preload #banner .logo {
+  -moz-transform: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  opacity: 1;
+}
+body.is-preload #banner h2 {
+  opacity: 1;
+  -moz-transform: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  -moz-filter: none;
+  -webkit-filter: none;
+  -ms-filter: none;
+  filter: none;
+}
+body.is-preload #banner p {
+  opacity: 1;
+  -moz-transform: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  -moz-filter: none;
+  -webkit-filter: none;
+  -ms-filter: none;
+  filter: none;
+}
 
-	body.is-preload #banner .logo {
-		-moz-transform: none;
-		-webkit-transform: none;
-		-ms-transform: none;
-		transform: none;
-		opacity: 1;
-	}
-
-	body.is-preload #banner h2 {
-		opacity: 1;
-		-moz-transform: none;
-		-webkit-transform: none;
-		-ms-transform: none;
-		transform: none;
-		-moz-filter: none;
-		-webkit-filter: none;
-		-ms-filter: none;
-		filter: none;
-	}
-
-	body.is-preload #banner p {
-		opacity: 01;
-		-moz-transform: none;
-		-webkit-transform: none;
-		-ms-transform: none;
-		transform: none;
-		-moz-filter: none;
-		-webkit-filter: none;
-		-ms-filter: none;
-		filter: none;
-	}
+/*# sourceMappingURL=noscript.css.map */
