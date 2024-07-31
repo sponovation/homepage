@@ -101,17 +101,19 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  background-color: #2e3141;
+#index #banner,
+#index #footer {
   background-image: url("../../images/index/bg.png");
-  background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed, fixed;
-  background-position: center, center;
+  background-position: right;
+  background-size: cover;
 }
-body.is-preload *,
-body.is-preload *:before,
-body.is-preload *:after {
+#index #banner.is-preload *,
+#index #banner.is-preload *:before,
+#index #banner.is-preload *:after,
+#index #footer.is-preload *,
+#index #footer.is-preload *:before,
+#index #footer.is-preload *:after {
   -moz-animation: none !important;
   -webkit-animation: none !important;
   -ms-animation: none !important;
@@ -122,22 +124,35 @@ body.is-preload *:after {
   transition: none !important;
 }
 
-#platform {
+#platform #banner,
+#platform #footer {
   background-image: url("../../images/platform/bg.png");
   background-position: right;
+  background-size: cover;
 }
 
-#goods {
+#goods #banner,
+#goods #footer {
   background-image: url("../../images/goods/bg.png");
+  background-size: cover;
 }
 
-#event {
+#event #banner,
+#event #footer {
   background-image: url("../../images/event/bg.png");
+  background-position: center;
+  background-size: cover;
 }
 
-#management {
+#management #banner {
   background-image: url("../../images/management/bg.png");
   background-size: cover;
+  background-position: left 30px;
+}
+#management #footer {
+  background-image: url("../../images/management/bg.png");
+  background-size: cover;
+  background-position: center;
 }
 
 body::after {
@@ -3090,6 +3105,7 @@ button:disabled,
   margin-left: 0.75em;
 }
 #header nav a[href="#menu"] {
+  vertical-align: bottom;
   text-decoration: none;
   -moz-transition: background-color 0.2s ease-in-out;
   -webkit-transition: background-color 0.2s ease-in-out;
@@ -3151,7 +3167,7 @@ button:disabled,
 }
 #header.alt nav a[href="#menu"] {
   background: url("../../images/icon/menu-white.svg") no-repeat center center;
-  background-size: contain;
+  background-size: cover;
 }
 #header.alt h1 {
   opacity: 0;
@@ -4197,6 +4213,8 @@ body.is-preload #banner p {
 @media screen and (max-width: 480px) {
   .copyright {
     padding-bottom: 50px;
+    padding-left: 21px;
+    padding-right: 21px;
   }
 }
 @media screen and (max-width: 1280px) {
@@ -4274,6 +4292,14 @@ body.is-preload #banner p {
 @media (max-width: 1920px) {
   #platform .content {
     padding-right: 7.1875vw;
+  }
+}
+#platform .additional-text {
+  text-align: start;
+}
+@media screen and (max-width: 480px) {
+  #platform .additional-text {
+    text-align: center;
   }
 }
 

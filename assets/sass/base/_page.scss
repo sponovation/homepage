@@ -36,18 +36,16 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  background-color: _palette(bg);
-
+#index #banner,
+#index #footer {
   background-image: url("../../images/index/bg.png");
-
+  background-repeat: no-repeat;
+  background-position: right;
   background-size: cover;
 
-  background-repeat: no-repeat;
-
-  background-attachment: fixed, fixed;
-
-  background-position: center, center;
+  // &.after {
+  //   height: 50vw;
+  // }
 
   // Stops initial animations until page loads.
   &.is-preload {
@@ -60,39 +58,55 @@ body {
   }
 }
 
-#platform {
+#platform #banner,
+#platform #footer {
   background-image: url("../../images/platform/bg.png");
   background-position: right;
+  background-size: cover;
 
   // @include breakpoint("<=xsmall") {
-  //   background-size: contain;
+  //   background-size: cover;
   //   background-position: center;
   //   background-image: url("../../images/platform/bg-mobile.png");
   // }
 }
 
-#goods {
+#goods #banner,
+#goods #footer {
   background-image: url("../../images/goods/bg.png");
-}
-
-#event {
-  background-image: url("../../images/event/bg.png");
-}
-
-#management {
-  background-image: url("../../images/management/bg.png");
   background-size: cover;
 }
 
+#event #banner,
+#event #footer {
+  background-image: url("../../images/event/bg.png");
+  background-position: center;
+  background-size: cover;
+}
 
-body::after{
-	/* 소스만 다운받고 화면은 나태내지 않는다. (숨김 처리) */
-    position:absolute; 
-    width:0; 
-    height:0; 
-    overflow:hidden; 
-    z-index:-1;
-    
-    /* load images */
-    content:url(../../images/platform/bg.png) url(../../images/goods/bg.png) url(../../images/event/bg.png) url(../../images/management/bg.png); /* 필요한 이미지 소스들 다운 */
+#management {
+  #banner {
+    background-image: url("../../images/management/bg.png");
+    background-size: cover;
+    background-position: left 30px;
+  }
+
+  #footer {
+    background-image: url("../../images/management/bg.png");
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+body::after {
+  /* 소스만 다운받고 화면은 나태내지 않는다. (숨김 처리) */
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+
+  /* load images */
+  content: url(../../images/platform/bg.png) url(../../images/goods/bg.png)
+    url(../../images/event/bg.png) url(../../images/management/bg.png); /* 필요한 이미지 소스들 다운 */
 }

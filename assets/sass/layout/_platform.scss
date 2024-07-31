@@ -3,6 +3,14 @@
     @include set-vw(padding-left, 139px);
     @include set-vw(padding-right, 138px);
   }
+
+  .additional-text {
+    text-align: start;
+
+    @include breakpoint("<=xsmall") {
+      text-align: center;
+    }
+  }
 }
 
 .platform-boxes {

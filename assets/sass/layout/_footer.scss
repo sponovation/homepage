@@ -22,7 +22,6 @@
       padding: 27px 21px 69.66px 21px;
     }
 
-
     > * {
       width: 100%;
     }
@@ -153,6 +152,8 @@
   }
   @include breakpoint("<=xsmall") {
     padding-bottom: 50px;
+    padding-left: 21px;
+    padding-right: 21px;
   }
 
   @include breakpoint("<=large") {
@@ -184,7 +185,6 @@
   display: flex;
   width: 100%;
   @include set-vw(gap, 120px);
-
 
   @include breakpoint("<=small") {
     flex-direction: column;

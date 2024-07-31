@@ -24,9 +24,9 @@
   top: 0;
   z-index: _misc(z-index-base);
   width: 100%;
-  
+
   backdrop-filter: blur(50px);
-  
+
   .header-wrapper {
     @include set-vw(width, 1727px);
     margin: 0 auto;
@@ -34,7 +34,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
 
   @include breakpoint("<=medium") {
@@ -53,8 +52,6 @@
 
   a {
     border-bottom: 0;
-
-
   }
 
   h1 {
@@ -89,8 +86,6 @@
       font-size: 16px;
     }
 
-
-
     a {
       color: #4b4b4b;
       display: inline-block;
@@ -100,7 +95,7 @@
       // padding: 0 1em;
       position: relative;
 
-      .border-line {        
+      .border-line {
         position: absolute;
         width: 120%;
         @include set-vw(top, 59px);
@@ -122,11 +117,10 @@
       }
 
       &.active {
-          color: _palette(blue);
+        color: _palette(blue);
       }
 
       .line {
-
         position: absolute;
         width: 130%;
         border-bottom: 4px solid #2b2e83;
@@ -140,6 +134,7 @@
       }
 
       &[href="#menu"] {
+        vertical-align: bottom;
         @include icon(false, solid);
         @include vendor(
           "transition",
@@ -151,8 +146,7 @@
         visibility: hidden;
         width: 39px;
         height: 25.629px;
-        background: url(../../images/icon/menu-blue.svg) no-repeat center
-          center;
+        background: url(../../images/icon/menu-blue.svg) no-repeat center center;
         background-size: contain;
 
         @include breakpoint("<=medium") {
@@ -192,9 +186,9 @@
         color: white;
 
         &[href="#menu"] {
-          background: url("../../images/icon/menu-white.svg") no-repeat
-            center center;
-          background-size: contain;
+          background: url("../../images/icon/menu-white.svg") no-repeat center
+            center;
+          background-size: cover;
         }
       }
     }
