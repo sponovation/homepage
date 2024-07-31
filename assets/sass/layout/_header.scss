@@ -27,7 +27,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  
   @include breakpoint("<=medium") {
     padding: 25px 21px;
   }
@@ -90,6 +90,27 @@
       white-space: nowrap;
       // padding: 0 1em;
       position: relative;
+
+      .border-line {        
+        position: absolute;
+        width: 120%;
+        @include set-vw(top, 59px);
+        // top: 40px;
+        left: -10px;
+        border-bottom: 4px solid _palette(blue);
+
+        @include breakpoint("<=xlarge") {
+          top: 3vw;
+        }
+
+        @include breakpoint("<=large") {
+          @include set-vw(top, 70px);
+        }
+
+        @include breakpoint("<=medium") {
+          @include set-vw(top, 75px);
+        }
+      }
 
       &.active {
           color: _palette(blue);
