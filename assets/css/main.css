@@ -3151,7 +3151,7 @@ button:disabled,
 }
 #header.alt nav a[href="#menu"] {
   background: url("../../images/icon/menu-white.svg") no-repeat center center;
-  background-size: contain;
+  background-size: cover;
 }
 #header.alt h1 {
   opacity: 0;
@@ -4197,6 +4197,8 @@ body.is-preload #banner p {
 @media screen and (max-width: 480px) {
   .copyright {
     padding-bottom: 50px;
+    padding-left: 21px;
+    padding-right: 21px;
   }
 }
 @media screen and (max-width: 1280px) {
