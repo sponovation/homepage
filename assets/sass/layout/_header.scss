@@ -27,7 +27,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+  backdrop-filter: blur(50px);
+
   @include breakpoint("<=medium") {
     padding: 25px 21px;
   }
@@ -220,7 +221,7 @@
     nav {
       a {
         &[href="#menu"] {
-          width: 4em;
+          vertical-align: bottom;
           white-space: nowrap;
           // text-indent: 4em;
           position: relative;
