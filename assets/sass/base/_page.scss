@@ -18,6 +18,7 @@ body {
 
 // Ensures page width is always >=320px.
 @include breakpoint("<=xsmall") {
+
   html,
   body {
     min-width: 320px;
@@ -49,6 +50,7 @@ html {
 
   // Stops initial animations until page loads.
   &.is-preload {
+
     *,
     *:before,
     *:after {
@@ -71,10 +73,25 @@ html {
   // }
 }
 
-#goods #banner,
-#goods #footer {
-  background-image: url("../../images/goods/bg.webp");
-  background-size: cover;
+#goods {
+  // background-image: url("../../images/goods/bg.webp");
+  // background-size: cover;
+
+  #banner {
+
+    background-image: url("../../images/goods/bg.webp");
+    background-size: cover;
+
+    @include breakpoint("<=xsmall") {
+      background-position: 85%;
+    }
+  }
+
+  #footer {
+    background-image: url("../../images/goods/bg.webp");
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 #event #banner,
@@ -107,6 +124,6 @@ body::after {
   z-index: -1;
 
   /* load images */
-  content: url(../../images/platform/bg.webp) url(../../images/goods/bg.webp)
-    url(../../images/event/bg.webp) url(../../images/management/bg.webp); /* 필요한 이미지 소스들 다운 */
+  content: url(../../images/platform/bg.webp) url(../../images/goods/bg.webp) url(../../images/event/bg.webp) url(../../images/management/bg.webp);
+  /* 필요한 이미지 소스들 다운 */
 }
