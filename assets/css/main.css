@@ -4487,6 +4487,22 @@ body.is-preload #banner p {
     padding-right: 21px;
   }
 }
+#goods #goods-item2 {
+  background: url(../../images/goods/goods/2.webp) 50%/cover no-repeat;
+}
+@media screen and (max-width: 480px) {
+  #goods #goods-item2 {
+    background: url(../../images/goods/goods/small-2.webp) 50%/cover no-repeat;
+  }
+}
+#goods #goods-item3 {
+  background: url(../../images/goods/goods/3.webp) 50%/cover no-repeat;
+}
+@media screen and (max-width: 480px) {
+  #goods #goods-item3 {
+    background: url(../../images/goods/goods/small-3.webp) 50%/cover no-repeat;
+  }
+}
 #goods .goods-items {
   width: 100%;
   display: grid;
@@ -4510,7 +4526,8 @@ body.is-preload #banner p {
   border-radius: 15px;
   padding-left: 59px;
   padding-top: 42px;
-  background: url(../../images/goods/rectangle-2.png) 50%/cover no-repeat;
+  background-size: cover;
+  background: url(../../images/goods/goods/rectangle-2.png) 50%/cover no-repeat;
 }
 @media (max-width: 1920px) {
   #goods .goods-items .goods-item {
@@ -4539,10 +4556,10 @@ body.is-preload #banner p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(../../images/goods/small-2.png) 50%/cover no-repeat;
+    background: url(../../images/goods/goods/small-2.png) 50%/cover no-repeat;
   }
 }
-#goods .goods-items .goods-item-text {
+#goods .goods-items .goods-item .goods-item-text {
   color: #fff;
   font-size: 43px;
   line-height: 49px;
@@ -4550,17 +4567,17 @@ body.is-preload #banner p {
   font-weight: 600;
 }
 @media (max-width: 1920px) {
-  #goods .goods-items .goods-item-text {
+  #goods .goods-items .goods-item .goods-item-text {
     font-size: 2.2395833333vw;
   }
 }
 @media (max-width: 1920px) {
-  #goods .goods-items .goods-item-text {
+  #goods .goods-items .goods-item .goods-item-text {
     line-height: 2.5520833333vw;
   }
 }
 @media screen and (max-width: 736px) {
-  #goods .goods-items .goods-item-text {
+  #goods .goods-items .goods-item .goods-item-text {
     color: #fff;
     text-align: center;
     font-size: 17px;

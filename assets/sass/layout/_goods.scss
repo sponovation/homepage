@@ -10,6 +10,22 @@
     }
   }
 
+  #goods-item2 {
+    background: url(../../images/goods/goods/2.webp) 50% / cover no-repeat;
+
+    @include breakpoint("<=xsmall") {
+      background: url(../../images/goods/goods/small-2.webp) 50% / cover no-repeat;
+    }
+  }
+
+  #goods-item3 {
+    background: url(../../images/goods/goods/3.webp) 50% / cover no-repeat;
+
+    @include breakpoint("<=xsmall") {
+      background: url(../../images/goods/goods/small-3.webp) 50% / cover no-repeat;
+    }
+  }
+
   .goods-items {
     width: 100%;
     display: grid;
@@ -28,7 +44,8 @@
       border-radius: 15px;
       @include set-vw(padding-left, 59px);
       @include set-vw(padding-top, 42px);
-      background: url(../../images/goods/rectangle-2.png) 50% / cover no-repeat;
+      background-size: cover;
+      background: url(../../images/goods/goods/rectangle-2.png) 50% / cover no-repeat;
 
       @include breakpoint("<=xsmall") {
         height: 153.598px;
@@ -37,25 +54,28 @@
         justify-content: center;
         align-items: center;
 
-        background: url(../../images/goods/small-2.png) 50% / cover no-repeat;
+        background: url(../../images/goods/goods/small-2.png) 50% / cover no-repeat;
       }
-    }
 
-    .goods-item-text {
-      color: #fff;
-      @include set-vw(font-size, 43px);
-      @include set-vw(line-height, 49px);
-      font-style: normal;
-      font-weight: 600;
 
-      @include breakpoint("<=small") {
+
+
+      .goods-item-text {
         color: #fff;
-        text-align: center;
-        font-size: 17px;
+        @include set-vw(font-size, 43px);
+        @include set-vw(line-height, 49px);
         font-style: normal;
         font-weight: 600;
-        line-height: 21px;
-        /* 123.529% */
+
+        @include breakpoint("<=small") {
+          color: #fff;
+          text-align: center;
+          font-size: 17px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 21px;
+          /* 123.529% */
+        }
       }
     }
   }
