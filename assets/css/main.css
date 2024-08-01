@@ -4566,7 +4566,8 @@ body.is-preload #banner p {
     font-size: 17px;
     font-style: normal;
     font-weight: 600;
-    line-height: 21px; /* 123.529% */
+    line-height: 21px;
+    /* 123.529% */
   }
 }
 #goods #made-text {
@@ -4702,7 +4703,8 @@ body.is-preload #banner p {
   box-shadow: 0px 0px 1.525px 0.572px rgba(125, 169, 255, 0.45);
   color: white;
   display: flex;
-  justify-content: center; /* 가로 가운데 정렬 */
+  justify-content: center;
+  /* 가로 가운데 정렬 */
   align-items: center;
   flex-direction: column;
 }
@@ -4759,6 +4761,7 @@ body.is-preload #banner p {
   color: #132A88;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 48px;
 }
 @media (max-width: 1920px) {

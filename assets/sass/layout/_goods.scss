@@ -15,93 +15,92 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     @include set-vw(gap, 28.67px);
+
     // justify-content: center;
     @include breakpoint("<=xsmall") {
       grid-template-columns: repeat(2, 1fr);
       gap: 10.4px;
     }
-  
+
     .goods-item {
       @include set-vw(width, 528.329px);
       @include set-vw(height, 349.441px);
       border-radius: 15px;
       @include set-vw(padding-left, 59px);
       @include set-vw(padding-top, 42px);
-      background: url(../../images/goods/rectangle-2.png) 50% / cover
-        no-repeat;
-  
+      background: url(../../images/goods/rectangle-2.png) 50% / cover no-repeat;
+
       @include breakpoint("<=xsmall") {
         height: 153.598px;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-  
-        background: url(../../images/goods/small-2.png) 50% / cover
-          no-repeat;
+
+        background: url(../../images/goods/small-2.png) 50% / cover no-repeat;
       }
     }
-  
+
     .goods-item-text {
       color: #fff;
       @include set-vw(font-size, 43px);
       @include set-vw(line-height, 49px);
       font-style: normal;
       font-weight: 600;
-  
+
       @include breakpoint("<=small") {
         color: #fff;
         text-align: center;
         font-size: 17px;
         font-style: normal;
         font-weight: 600;
-        line-height: 21px; /* 123.529% */
+        line-height: 21px;
+        /* 123.529% */
       }
     }
   }
-  
+
   #made-text {
     @include set-vw(margin-top, 229.56px);
-  
+
     @include breakpoint("<=xsmall") {
       margin-top: 51.4px;
     }
-  
+
   }
-  
+
   .made-items {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     @include set-vw(gap, 28.67px);
     text-align: center;
-  
+
     @include breakpoint("<=xsmall") {
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
     }
-  
+
     .made-item {
       margin-bottom: 23.61px;
     }
-  
+
     .made-item-image {
       @include set-vw(width, 528.329px);
       @include set-vw(border-radius, 15px);
       @include set-vw(width, 528.329px);
       @include set-vw(height, 349.441px);
-      background: url(../../images/goods/made/rectangle-28.png) lightgray 50% /
-      cover no-repeat;
-      
-      
+      background: url(../../images/goods/made/rectangle-28.png) lightgray 50% / cover no-repeat;
+
+
       @include breakpoint("<=xsmall") {
-          border-radius: 4.372px;
-          margin-bottom: 11.62px;
-          width: 100%;
-          padding-top: 66%;
-        }
+        border-radius: 4.372px;
+        margin-bottom: 11.62px;
+        width: 100%;
+        padding-top: 66%;
+      }
     }
-  
+
     .made-item-text {
       @include set-vw(padding-top, 229.56px);
       color: #484848;
@@ -113,14 +112,15 @@
       font-style: normal;
       font-weight: 600;
       text-align: center;
-    
+
       @include breakpoint("<=large") {
         font-size: 15px;
         line-height: 13.117px;
       }
     }
   }
-  .ask-box{
+
+  .ask-box {
     width: 100%;
     display: flex;
     @include set-vw(gap, 27px);
@@ -132,96 +132,101 @@
       gap: 9px
     }
 
-  .open-chat{
-    @include set-vw(width, 808px);
-    @include set-vw(height, 419px);
-    @include set-vw(font-size, 60px);
-    @include set-vw(line-height, 74px);
-    @include set-vw(border-radius, 15px);
-    background: #132A88;
-    box-shadow: 0px 0px 1.525px 0.572px rgba(125, 169, 255, 0.45);
-    color: white;
-    display: flex;
-    justify-content: center; /* 가로 가운데 정렬 */
-    align-items: center;
-    flex-direction: column;
-    
-    
-    @include breakpoint("<=xsmall") {
-    flex-direction: row;
-    border-radius: 2.859px;
-    line-height: 19.1px; 
-    width: 100%;
-    height: 11.7vw;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 500;
+    .open-chat {
+      @include set-vw(width, 808px);
+      @include set-vw(height, 419px);
+      @include set-vw(font-size, 60px);
+      @include set-vw(line-height, 74px);
+      @include set-vw(border-radius, 15px);
+      background: #132A88;
+      box-shadow: 0px 0px 1.525px 0.572px rgba(125, 169, 255, 0.45);
+      color: white;
+      display: flex;
+      justify-content: center;
+      /* 가로 가운데 정렬 */
+      align-items: center;
+      flex-direction: column;
 
-  }
-    .bold{
-      font-weight: 800;
-    }
-  }
-
-  .order{
-    @include set-vw(width, 808px);
-    @include set-vw(height, 419px);
-    @include set-vw(font-size, 60px);
-    @include set-vw(line-height, 74px);
-    @include set-vw(border-radius, 15px);
-    @include set-vw(padding-left, 73px);
-    @include set-vw(padding-top, 48px);
-    background: #FFF;
-    box-shadow: 0px 0px 8px 3px rgba(125, 169, 255, 0.45);
-    color: #132A88;
-    display: flex;
-    flex-direction: column;
-    @include set-vw(gap, 48px);
-
-    @include breakpoint("<=xsmall") {
-      min-height: 97px;
-      border-radius: 2.864px;
-      font-size: 17px;
-      line-height: 19.1px;
-      width: 100%;
-      box-shadow: 0px 0px 1.527px 0.573px rgba(125, 169, 255, 0.45);
-      padding-top: 13px;
-      padding-bottom: 12px;
-      padding-left: 19px;
-    }
-
-    .br {
-      @include breakpoint("<=xsmall") {display: none;}
-    }
-
-    
-    .bold{
-      font-weight: 800;
-    }
-    
-    .telephone{
-      font-weight: 600;
-      @include set-vw(font-size, 40px);
-      @include set-vw(line-height, 64px);
-      color: #000;
 
       @include breakpoint("<=xsmall") {
-        font-size: 14px;
-        line-height: 20px
+        flex-direction: row;
+        border-radius: 2.859px;
+        line-height: 19.1px;
+        width: 100%;
+        height: 11.7vw;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 500;
+
+      }
+
+      .bold {
+        font-weight: 800;
+      }
+    }
+
+    .order {
+      @include set-vw(width, 808px);
+      @include set-vw(height, 419px);
+      @include set-vw(font-size, 60px);
+      @include set-vw(line-height, 74px);
+      @include set-vw(border-radius, 15px);
+      @include set-vw(padding-left, 73px);
+      @include set-vw(padding-top, 48px);
+      background: #FFF;
+      box-shadow: 0px 0px 8px 3px rgba(125, 169, 255, 0.45);
+      color: #132A88;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include set-vw(gap, 48px);
+
+      @include breakpoint("<=xsmall") {
+        min-height: 97px;
+        border-radius: 2.864px;
+        font-size: 17px;
+        line-height: 19.1px;
+        width: 100%;
+        box-shadow: 0px 0px 1.527px 0.573px rgba(125, 169, 255, 0.45);
+        padding-top: 13px;
+        padding-bottom: 12px;
+        padding-left: 19px;
+      }
+
+      .br {
+        @include breakpoint("<=xsmall") {
+          display: none;
+        }
+      }
+
+
+      .bold {
+        font-weight: 800;
+      }
+
+      .telephone {
+        font-weight: 600;
+        @include set-vw(font-size, 40px);
+        @include set-vw(line-height, 64px);
+        color: #000;
+
+        @include breakpoint("<=xsmall") {
+          font-size: 14px;
+          line-height: 20px
+        }
       }
     }
   }
 }
-}
 
 #goods {
-  .comming-soon{
+  .comming-soon {
     display: none;
 
     @include breakpoint("<=xsmall") {
       border-radius: 7.812px;
       height: 99px;
-      
+
       width: 100%;
       display: flex;
     }
