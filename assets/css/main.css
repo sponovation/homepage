@@ -2776,8 +2776,9 @@ button:disabled,
 
 /* Features */
 .features {
-  display: flex;
+  display: grid;
   gap: 46px;
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 56px;
 }
 @media (max-width: 1920px) {
@@ -2792,6 +2793,7 @@ button:disabled,
 }
 @media screen and (max-width: 480px) {
   .features {
+    grid-template-columns: repeat(1, 1fr);
     margin-top: 21px;
   }
 }
@@ -4466,6 +4468,20 @@ body.is-preload #banner p {
   }
 }
 
+#goods .linear-button {
+  padding-bottom: 0;
+  margin-top: 72px;
+}
+@media (max-width: 1920px) {
+  #goods .linear-button {
+    margin-top: 3.75vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  #goods .linear-button {
+    margin-top: 31px;
+  }
+}
 #goods .content {
   max-width: 1920px;
   padding-left: 139px;

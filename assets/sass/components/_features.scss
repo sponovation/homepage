@@ -7,10 +7,13 @@
 /* Features */
 
 .features {
-  display: flex;
+  display: grid;
   @include set-vw(gap, 46px);
+  grid-template-columns: repeat(2, 1fr);
   @include set-vw(margin-top, 56px);
+
   @include breakpoint("<=xsmall") {
+    grid-template-columns: repeat(1, 1fr);
     margin-top: 21px;
   }
 
@@ -22,7 +25,7 @@
       @include set-vw(padding-top, 59px);
       background: #F1F8FF;
       @include set-vw(width, 730px);
-      @include set-vw(border-radius, 24px); 
+      @include set-vw(border-radius, 24px);
       // margin-top: -20px;
       @include set-vw(margin-top, -30px);
 
@@ -60,15 +63,14 @@
 
 
     h3 {
-      @include set-vw(font-size, 30px);    
-      @include set-vw(line-height, 40px);    
-      @include set-vw(padding-bottom, 34px);    
+      @include set-vw(font-size, 30px);
+      @include set-vw(line-height, 40px);
+      @include set-vw(padding-bottom, 34px);
       text-align: start;
 
       @include breakpoint("<=medium") {
         font-size: 18px;
         line-height: 20px
-        
       }
 
     }

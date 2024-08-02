@@ -1,4 +1,14 @@
 #goods {
+
+  .linear-button {
+    padding-bottom: 0;
+    @include set-vw(margin-top, 72px);
+
+    @include breakpoint("<=xsmall") {
+      margin-top: 31px;
+    }
+  }
+
   .content {
     max-width: 1920px;
     @include set-vw(padding-left, 139px);
