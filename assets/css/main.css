@@ -2514,7 +2514,7 @@ ul.contact li:first-child {
   padding-top: 0;
 }
 ul.contact li a {
-  margin-top: 10px;
+  margin-top: 6px;
 }
 @media screen and (max-width: 736px) {
   ul.contact li a {
@@ -4930,7 +4930,7 @@ body.is-preload #banner p {
 }
 @media screen and (max-width: 480px) {
   #player {
-    display: flex;
+    display: none;
   }
 }
 
@@ -4970,21 +4970,28 @@ body.is-preload #banner p {
 
 .event-box {
   border-radius: 15px;
+  width: 1642px;
   background: #FFF;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   margin-top: -20px;
   padding-top: 41px;
   padding-left: 48px;
+  padding-right: 48px;
   color: #484848;
   font-family: Pretendard;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 45px; /* 225% */
+  /* 225% */
 }
 @media (max-width: 1920px) {
   .event-box {
     border-radius: 0.78125vw;
+  }
+}
+@media (max-width: 1920px) {
+  .event-box {
+    width: 85.5208333333vw;
   }
 }
 @media (max-width: 1920px) {
@@ -4995,6 +5002,26 @@ body.is-preload #banner p {
 @media (max-width: 1920px) {
   .event-box {
     padding-left: 2.5vw;
+  }
+}
+@media (max-width: 1920px) {
+  .event-box {
+    padding-right: 2.5vw;
+  }
+}
+@media screen and (max-width: 980px) {
+  .event-box {
+    padding-top: 60px;
+  }
+}
+@media screen and (max-width: 980px) and (max-width: 1920px) {
+  .event-box {
+    padding-top: 3.125vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .event-box {
+    padding-top: 20px;
   }
 }
 .event-box .event-ul {
@@ -5034,15 +5061,11 @@ body.is-preload #banner p {
   font-weight: 600;
   font-size: 20px;
   line-height: 45px;
+  word-break: break-all;
 }
 @media (max-width: 1920px) {
   .event-box .title {
     font-size: 1.0416666667vw;
-  }
-}
-@media (max-width: 1920px) {
-  .event-box .title {
-    line-height: 2.34375vw;
   }
 }
 @media screen and (max-width: 980px) {

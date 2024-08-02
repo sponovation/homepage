@@ -29,7 +29,8 @@ ul.contact {
     }
 
     a {
-      margin-top: 10px;
+      margin-top: 6px;
+
       @include breakpoint("<=small") {
         margin-top: 0;
       }
