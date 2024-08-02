@@ -1,18 +1,24 @@
 #player {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     @include set-vw(gap, 23px);
+
+    @include breakpoint("<=medium") {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .player-row {
         display: flex;
         @include set-vw(gap, 23px);
     }
+
     .player-img {
-        @include set-vw(width, 393px);
-        @include set-vw(height, 466px);
+        width: 100%;
     }
 
     @include breakpoint("<=xsmall") {
-        display: none;
+        display: flex;
     }
 }
 
@@ -24,7 +30,7 @@
     .player-img {
         width: 100%;
     }
-    
+
     @include breakpoint("<=xsmall") {
         display: block;
     }

@@ -22,7 +22,12 @@
       padding: 27px 21px 69.66px 21px;
     }
 
-    > * {
+    form {
+      width: 50%;
+      margin: 0 0 (_size(element-margin) * 2) 0;
+    }
+
+    >* {
       width: 100%;
     }
 
@@ -150,6 +155,7 @@
   .bold {
     font-weight: 600;
   }
+
   @include breakpoint("<=xsmall") {
     padding-bottom: 50px;
     padding-left: 21px;
