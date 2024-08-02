@@ -25,6 +25,11 @@
     form {
       width: 50%;
       margin: 0 0 (_size(element-margin) * 2) 0;
+
+      #submit_button:disabled {
+        background-color: transparent;
+        border: 1px solid white;
+      }
     }
 
     >* {

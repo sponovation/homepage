@@ -70,6 +70,9 @@
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 form.reset();
+                var button = form.querySelector("button");
+                button.textContent = "Send Message"
+                button.disabled = false;
                 var formElements = form.querySelector(".form-elements")
                 if (formElements) {
                     formElements.style.display = "none"; // hide form
@@ -91,6 +94,7 @@
     function loaded() {
         // bind to the submit event of our form
         var forms = document.querySelectorAll("form.gform");
+        console.log(forms);
         for (var i = 0; i < forms.length; i++) {
             forms[i].addEventListener("submit", handleFormSubmit, false);
         }
@@ -98,9 +102,8 @@
     document.addEventListener("DOMContentLoaded", loaded, false);
 
     function disableAllButtons(form) {
-        var buttons = form.querySelectorAll("button");
-        for (var i = 0; i < buttons.length; i++) {
-            buttons[i].disabled = true;
-        }
+        var buttons = form.querySelector("button");
+        buttons.textContent = "Sending Message...";
+        buttons.disabled = true;
     }
 })();

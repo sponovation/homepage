@@ -4105,6 +4105,10 @@ body.is-preload #banner p {
   width: 50%;
   margin: 0 0 4em 0;
 }
+#footer .inner form #submit_button:disabled {
+  background-color: transparent;
+  border: 1px solid white;
+}
 #footer .inner > * {
   width: 100%;
 }
