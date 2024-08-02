@@ -2055,6 +2055,7 @@ textarea {
   padding: 0 1em;
   text-decoration: none;
   width: 100%;
+  color: white;
 }
 input[type=text]:invalid,
 input[type=password]:invalid,
