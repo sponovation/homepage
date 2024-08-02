@@ -4479,6 +4479,7 @@ body.is-preload #banner p {
 
 #goods .linear-button {
   padding-bottom: 0;
+  margin-bottom: 10px;
   margin-top: 72px;
 }
 @media (max-width: 1920px) {
@@ -4488,7 +4489,8 @@ body.is-preload #banner p {
 }
 @media screen and (max-width: 480px) {
   #goods .linear-button {
-    margin-top: 31px;
+    margin-top: 21px;
+    margin-bottom: 20px;
   }
 }
 #goods .content {

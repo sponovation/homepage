@@ -2,10 +2,13 @@
 
   .linear-button {
     padding-bottom: 0;
+
+    margin-bottom: 10px;
     @include set-vw(margin-top, 72px);
 
     @include breakpoint("<=xsmall") {
-      margin-top: 31px;
+      margin-top: 21px;
+      margin-bottom: 20px;
     }
   }
 
