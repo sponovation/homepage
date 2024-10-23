@@ -53,6 +53,12 @@
     function handleFormSubmit(event) {  // handles form submit without any jquery
         event.preventDefault();           // we are submitting via xhr below
         var form = event.target;
+        // Check if reCAPTCHA is completed
+        var recaptchaResponse = grecaptcha.getResponse();
+        if (recaptchaResponse.length === 0) {
+            alert('reCAPTCHA를 완료해주세요.');
+            return;
+        }
         var formData = getFormData(form);
         var data = formData.data;
 
