@@ -4920,7 +4920,8 @@ body.is-preload #banner p {
   }
 }
 #player .player-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 23px;
 }
 @media (max-width: 1920px) {
