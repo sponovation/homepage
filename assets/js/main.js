@@ -133,4 +133,16 @@
       // Hide on escape.
       if (event.keyCode == 27) $menu._hide();
     });
+
+  // Floating button - Scroll to top
+  $(".floating").on("click", function (event) {
+    event.preventDefault();
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      800,
+      "swing"
+    );
+  });
 })(jQuery);
