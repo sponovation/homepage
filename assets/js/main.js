@@ -12,7 +12,7 @@
 
   // 브라우저 언어 감지 후 일치하는 언어 index.html로 이동
   var userLang = navigator.language || navigator.userLanguage;
-  console.log("브라우저 언어:", userLang);
+  // console.log("브라우저 언어:", userLang);
 
   // ko-KR이 아닌 경우 영문 페이지로 이동
   if (userLang.toLowerCase() !== "ko-kr") {
