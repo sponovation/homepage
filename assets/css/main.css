@@ -5760,6 +5760,13 @@ body.is-preload #banner p {
   }
 }
 
+#goods .goods-intro-banner {
+  background: url("../../images/goods/bg-2.png") center / cover no-repeat;
+  width: 100%;
+  aspect-ratio: 1920 / 1494;
+  color: #ffffff;
+}
+
 #goods .linear-button {
   padding-bottom: 0;
   margin-bottom: 10px;
