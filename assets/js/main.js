@@ -1,7 +1,7 @@
 /*
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  Solid State by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 (function ($) {
@@ -12,10 +12,10 @@
 
   // 브라우저 언어 감지 후 일치하는 언어 index.html로 이동
   var userLang = navigator.language || navigator.userLanguage;
-  // console.log("브라우저 언어:", userLang);
+  console.log("브라우저 언어:", userLang);
 
-  // ko-KR이 아닌 경우 영문 페이지로 이동
-  if (userLang.toLowerCase() !== "ko-kr") {
+  // ko로 시작하지 않는 경우 영문 페이지로 이동 (ko, ko-KR, ko-kr 모두 한국어로 인식)
+  if (!userLang.toLowerCase().startsWith("ko")) {
     if (!window.location.pathname.includes("html/en")) {
       window.location.href = "/html/en/index.html";
     }
