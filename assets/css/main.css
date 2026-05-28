@@ -4506,6 +4506,34 @@ body.is-menu-visible #menu .inner {
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
+#banner .banner-ownly-logo {
+  display: block;
+  width: 200px;
+  height: auto;
+  margin-bottom: 12px;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+@media (max-width: 1920px) {
+  #banner .banner-ownly-logo {
+    width: 10.4166666667vw;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  #banner .banner-ownly-logo {
+    width: 130px;
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #banner .banner-ownly-logo {
+    width: 100px;
+    margin-bottom: 6px;
+  }
+}
+
 #banner p {
   -moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease,
     -moz-filter 0.25s ease;
@@ -7469,6 +7497,393 @@ body.is-preload #banner p {
   .mypb-slider-right {
     width: 25px;
     padding: 5px;
+  }
+}
+
+/* =====================================================
+   Section 05 - CONTACT
+   ===================================================== */
+#goods .goods-contact-banner {
+  background: #111111;
+  width: 100%;
+  padding: 80px 207px 100px;
+  box-sizing: border-box;
+}
+
+#goods .gcob-inner {
+  max-width: 1506px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+}
+
+#goods .gcob-kakao {
+  flex: 1;
+  background: #F6C443;
+  border-radius: 20px;
+  padding: 40px 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+  text-decoration: none;
+  transition: filter 0.2s;
+}
+
+#goods .gcob-kakao:hover {
+  filter: brightness(0.93);
+}
+
+#goods .gcob-arrow {
+  align-self: flex-end;
+  font-size: 56px;
+  color: #111111;
+  line-height: 1;
+}
+
+#goods .gcob-kakao-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#goods .gcob-kakao-text span {
+  color: #111111;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+#goods .gcob-bold {
+  font-weight: 700 !important;
+}
+
+#goods .gcob-order {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+}
+
+#goods .gcob-order-title {
+  color: #3d3d3d;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+#goods .gcob-order-title strong {
+  font-weight: 700;
+  color: #111111;
+}
+
+#goods .gcob-order-email {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #888888;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+#goods .gcob-order-email img {
+  width: 47px;
+  opacity: 0.5;
+}
+
+@media (max-width: 1920px) {
+  #goods .goods-contact-banner {
+    padding: 4.1666666667vw 10.78125vw 5.2083333333vw;
+  }
+
+  #goods .gcob-inner {
+    gap: 1.0416666667vw;
+  }
+
+  #goods .gcob-kakao,
+  #goods .gcob-order {
+    border-radius: 1.0416666667vw;
+    padding: 2.0833333333vw 2.7083333333vw;
+    min-height: 15.625vw;
+  }
+
+  #goods .gcob-arrow {
+    font-size: 2.9166666667vw;
+  }
+
+  #goods .gcob-kakao-text span,
+  #goods .gcob-order-title {
+    font-size: 1.7708333333vw;
+  }
+
+  #goods .gcob-order-email {
+    font-size: 1.3541666667vw;
+    gap: 0.7291666667vw;
+  }
+
+  #goods .gcob-order-email img {
+    width: 2.4479166667vw;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #goods .goods-contact-banner {
+    padding: 60px 40px 80px;
+  }
+
+  #goods .gcob-kakao-text span,
+  #goods .gcob-order-title {
+    font-size: 26px;
+  }
+
+  #goods .gcob-order-email {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #goods .goods-contact-banner {
+    padding: 50px 24px 60px;
+  }
+
+  #goods .gcob-inner {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  #goods .gcob-kakao,
+  #goods .gcob-order {
+    min-height: 200px;
+    padding: 28px 32px;
+  }
+
+  #goods .gcob-kakao-text span,
+  #goods .gcob-order-title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #goods .goods-contact-banner {
+    padding: 40px 16px 50px;
+  }
+
+  #goods .gcob-kakao,
+  #goods .gcob-order {
+    min-height: 170px;
+    padding: 22px 24px;
+    border-radius: 14px;
+  }
+
+  #goods .gcob-arrow {
+    font-size: 28px;
+  }
+
+  #goods .gcob-kakao-text span,
+  #goods .gcob-order-title {
+    font-size: 20px;
+  }
+
+  #goods .gcob-order-email {
+    font-size: 13px;
+  }
+}
+
+/* =====================================================
+   Section 04 - CATEGORY
+   ===================================================== */
+#goods .goods-category-banner {
+  background: #111111;
+  width: 100%;
+  padding: 100px 207px 120px;
+  box-sizing: border-box;
+}
+
+#goods .gcb2-inner {
+  max-width: 1506px;
+  margin: 0 auto;
+}
+
+#goods .gcb2-subtitle {
+  text-align: center;
+  color: #A0A0A0;
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 48px;
+}
+
+#goods .gcb2-catalog-btn {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 72px;
+  padding: 24px 80px;
+  background: #ffffff;
+  color: #111111;
+  font-size: 32px;
+  font-weight: 700;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+#goods .gcb2-catalog-btn:hover {
+  background: #F6C443;
+  color: #111111;
+}
+
+#goods .goc-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+#goods .goc-item {
+  position: relative;
+  width: 100%;
+  height: 349px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#goods .goc-item-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 65%;
+  display: flex;
+  align-items: center;
+  padding-left: 44px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.78) 0%, transparent 100%);
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.35;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#goods .goc-item:hover .goc-item-text {
+  opacity: 1;
+}
+
+@media (max-width: 1920px) {
+  #goods .goods-category-banner {
+    padding: 5.2083333333vw 10.78125vw 6.25vw;
+  }
+
+  #goods .gcb2-subtitle {
+    font-size: 1.1458333333vw;
+  }
+
+  #goods .gcb2-catalog-btn {
+    padding: 1.25vw 4.1666666667vw;
+    font-size: 1.6666666667vw;
+    margin-bottom: 3.75vw;
+  }
+
+  #goods .goc-items {
+    gap: 1.4583333333vw;
+  }
+
+  #goods .goc-item {
+    height: 18.2vw;
+    border-radius: 0.78125vw;
+  }
+
+  #goods .goc-item-text {
+    padding-left: 2.2916666667vw;
+    font-size: 1.6666666667vw;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #goods .goods-category-banner {
+    padding: 60px 40px 80px;
+  }
+
+  #goods .gcb2-subtitle {
+    font-size: 16px;
+  }
+
+  #goods .gcb2-catalog-btn {
+    font-size: 22px;
+    padding: 18px 52px;
+    margin-bottom: 48px;
+  }
+
+  #goods .goc-item {
+    height: 220px;
+  }
+
+  #goods .goc-item-text {
+    font-size: 22px;
+    padding-left: 28px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #goods .goods-category-banner {
+    padding: 50px 24px 60px;
+  }
+
+  #goods .gcb2-catalog-btn {
+    font-size: 18px;
+    padding: 16px 40px;
+    margin-bottom: 36px;
+  }
+
+  #goods .goc-items {
+    gap: 16px;
+  }
+
+  #goods .goc-item {
+    height: 180px;
+  }
+
+  #goods .goc-item-text {
+    font-size: 18px;
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #goods .goods-category-banner {
+    padding: 40px 16px 50px;
+  }
+
+  #goods .gcb2-subtitle {
+    font-size: 13px;
+    margin-bottom: 28px;
+  }
+
+  #goods .gcb2-catalog-btn {
+    font-size: 15px;
+    padding: 14px 32px;
+    margin-bottom: 28px;
+  }
+
+  #goods .goc-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  #goods .goc-item {
+    height: 120px;
+    border-radius: 8px;
+  }
+
+  #goods .goc-item-text {
+    font-size: 14px;
+    padding-left: 12px;
   }
 }
 

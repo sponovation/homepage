@@ -100,7 +100,6 @@
     function loaded() {
         // bind to the submit event of our form
         var forms = document.querySelectorAll("form.gform");
-        console.log(forms);
         for (var i = 0; i < forms.length; i++) {
             forms[i].addEventListener("submit", handleFormSubmit, false);
         }

@@ -12,7 +12,6 @@
 
   // 브라우저 언어 감지 후 일치하는 언어 index.html로 이동
   var userLang = navigator.language || navigator.userLanguage;
-  console.log("브라우저 언어:", userLang);
 
   // ko로 시작하지 않는 경우 영문 페이지로 이동 (ko, ko-KR, ko-kr 모두 한국어로 인식)
   if (!userLang.toLowerCase().startsWith("ko")) {
