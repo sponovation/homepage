@@ -5766,6 +5766,27 @@ body.is-preload #banner p {
   aspect-ratio: 1920 / 1494;
   color: #ffffff;
   position: relative;
+  margin-bottom: -2px;
+}
+
+#goods .goods-client-banner {
+  background: #111111;
+  width: 100%;
+  color: #ffffff;
+  padding: 100px 207px 80px;
+  box-sizing: border-box;
+}
+
+#goods .goods-client-banner .gib-inner {
+  position: static;
+  padding: 0;
+  row-gap: 60px;
+}
+
+.client-logo-slider-placeholder {
+  width: 100%;
+  min-height: 260px;
+  overflow: hidden;
 }
 
 /* --- gib (goods-intro-banner) inner layout --- */
@@ -5983,6 +6004,18 @@ body.is-preload #banner p {
 
 /* Responsive: 1920px fluid */
 @media (max-width: 1920px) {
+  #goods .goods-client-banner {
+    padding: 5.208vw 10.78125vw 4.166vw;
+  }
+
+  #goods .goods-client-banner .gib-inner {
+    row-gap: 3.125vw;
+  }
+
+  .client-logo-slider-placeholder {
+    min-height: 13.541vw;
+  }
+
   .gib-inner {
     padding: 4.6875vw 10.78125vw 4.166vw;
     row-gap: 1.5625vw;
@@ -6042,6 +6075,18 @@ body.is-preload #banner p {
     height: auto;
   }
 
+  #goods .goods-client-banner {
+    padding: 60px 40px;
+  }
+
+  #goods .goods-client-banner .gib-inner {
+    gap: 40px;
+  }
+
+  .client-logo-slider-placeholder {
+    min-height: 200px;
+  }
+
   .gib-inner {
     position: relative;
     justify-content: flex-start;
@@ -6081,6 +6126,18 @@ body.is-preload #banner p {
 
 /* Responsive: 480px */
 @media screen and (max-width: 480px) {
+  #goods .goods-client-banner {
+    padding: 40px 21px;
+  }
+
+  #goods .goods-client-banner .gib-inner {
+    gap: 28px;
+  }
+
+  .client-logo-slider-placeholder {
+    min-height: 160px;
+  }
+
   .gib-inner {
     gap: 28px;
     padding: 40px 21px;
