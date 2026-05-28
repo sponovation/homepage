@@ -5765,6 +5765,371 @@ body.is-preload #banner p {
   width: 100%;
   aspect-ratio: 1920 / 1494;
   color: #ffffff;
+  position: relative;
+}
+
+/* --- gib (goods-intro-banner) inner layout --- */
+
+.gib-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 30px;
+  padding: 90px 207px 80px;
+  font-family: 'Raleway', 'PretendardVariable', sans-serif;
+}
+
+/* 영문 폰트 명시 적용 */
+.gib-title,
+.gib-subtitle,
+.gib-brand-desc p,
+.gib-step-title,
+.gib-step-desc {
+  font-family: 'Raleway', 'PretendardVariable', sans-serif;
+}
+
+/* Top */
+.gib-top {
+  text-align: center;
+}
+
+.gib-title {
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-transform: none !important;
+}
+
+.gib-title strong {
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.gib-subtitle {
+  font-size: 24px;
+  line-height: 1.9;
+  color: #A0A0A0;
+}
+
+.gib-subtitle strong {
+  font-weight: 700;
+  color: #F6C443;
+}
+
+/* Middle */
+.gib-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.gib-arrow {
+  width: 2px;
+  height: 160px;
+  background: linear-gradient(to bottom, transparent, #C9A227);
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.gib-arrow::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #C9A227;
+}
+
+.gib-logo {
+  width: 220px;
+  height: auto;
+  margin: 12px 0;
+}
+
+.gib-brand-desc {
+  text-align: center;
+}
+
+.gib-brand-desc p {
+  font-size: 24px;
+  line-height: 1.5;
+  color: #A0A0A0;
+  margin-bottom: 6px;
+}
+
+.gib-brand-desc p:last-child {
+  margin-bottom: 0;
+}
+
+.gib-brand-desc strong {
+  font-weight: 700;
+  color: #F6C443;
+}
+
+/* Bottom */
+.gib-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.gib-progress-img {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+}
+
+.gib-progress-placeholder {
+  width: 100%;
+  max-width: 900px;
+}
+
+.gib-progressbar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.gib-progressbar::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%);
+}
+
+.gib-pb-step {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.gib-pb-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid currentColor;
+  background: transparent;
+}
+
+.gib-pb-step--1 .gib-pb-circle { color: #F6C443; }
+.gib-pb-step--2 .gib-pb-circle { color: #FFA600; }
+.gib-pb-step--3 .gib-pb-circle { color: #FF8400; }
+
+.gib-steps {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 20px;
+}
+
+.gib-step {
+  flex: 1;
+  text-align: center;
+}
+
+.gib-step-title {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-transform: none !important;
+}
+
+.gib-step-title strong {
+  font-weight: 800;
+  color: #F6C443;
+}
+
+.gib-step:nth-child(2) .gib-step-title,
+.gib-step:nth-child(2) .gib-step-title strong {
+  color: #FFA600;
+}
+
+.gib-step:nth-child(3) .gib-step-title,
+.gib-step:nth-child(3) .gib-step-title strong {
+  color: #FF8400;
+}
+
+.gib-step-desc {
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.gib-step-desc strong {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Responsive: 1920px fluid */
+@media (max-width: 1920px) {
+  .gib-inner {
+    padding: 4.6875vw 10.78125vw 4.166vw;
+    row-gap: 1.5625vw;
+  }
+
+  .gib-title {
+    font-size: 2.604vw;
+    margin-bottom: 1.041vw;
+  }
+
+  .gib-subtitle {
+    font-size: 1.25vw;
+  }
+
+  .gib-arrow {
+    height: 8.332vw;
+  }
+
+  .gib-arrow::after {
+    width: 0.520vw;
+    height: 0.520vw;
+    bottom: -0.260vw;
+  }
+
+  .gib-logo {
+    width: 11.458vw;
+    margin: 0.625vw 0;
+  }
+
+  .gib-brand-desc p {
+    font-size: 1.25vw;
+    margin-bottom: 0.312vw;
+  }
+
+  .gib-progress-placeholder {
+    height: 1.041vw;
+  }
+
+  .gib-steps {
+    margin-top: 1.041vw;
+  }
+
+  .gib-step-title {
+    font-size: 1.6667vw;
+    margin-bottom: 0.5208vw;
+  }
+
+  .gib-step-desc {
+    font-size: 0.9375vw;
+  }
+}
+
+/* Responsive: 980px */
+@media screen and (max-width: 980px) {
+  #goods .goods-intro-banner {
+    aspect-ratio: unset;
+    height: auto;
+  }
+
+  .gib-inner {
+    position: relative;
+    justify-content: flex-start;
+    gap: 40px;
+    padding: 60px 40px;
+  }
+
+  .gib-title {
+    font-size: 32px;
+  }
+
+  .gib-subtitle {
+    font-size: 20px;
+  }
+
+  .gib-arrow {
+    height: 80px;
+  }
+
+  .gib-logo {
+    width: 160px;
+    margin: 16px 0;
+  }
+
+  .gib-brand-desc p {
+    font-size: 20px;
+  }
+
+  .gib-step-title {
+    font-size: 18px;
+  }
+
+  .gib-step-desc {
+    font-size: 13px;
+  }
+}
+
+/* Responsive: 480px */
+@media screen and (max-width: 480px) {
+  .gib-inner {
+    gap: 28px;
+    padding: 40px 21px;
+  }
+
+  .gib-title {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .gib-subtitle {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .gib-arrow {
+    height: 60px;
+  }
+
+  .gib-logo {
+    width: 130px;
+    margin: 12px 0;
+  }
+
+  .gib-brand-desc p {
+    font-size: 15px;
+  }
+
+  .gib-progress-placeholder {
+    height: 40px;
+  }
+
+  .gib-steps {
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 12px;
+  }
+
+  .gib-step {
+    padding: 0;
+  }
+
+  .gib-step-title {
+    font-size: 16px;
+  }
+
+  .gib-step-desc {
+    font-size: 12px;
+  }
 }
 
 #goods .linear-button {
