@@ -5773,20 +5773,43 @@ body.is-preload #banner p {
   background: #111111;
   width: 100%;
   color: #ffffff;
-  padding: 100px 207px 80px;
-  box-sizing: border-box;
-}
-
-#goods .goods-client-banner .gib-inner {
-  position: static;
-  padding: 0;
-  row-gap: 60px;
-}
-
-.client-logo-slider-placeholder {
-  width: 100%;
-  min-height: 260px;
   overflow: hidden;
+}
+
+.gcb-text {
+  padding: 100px 207px 60px;
+  text-align: center;
+}
+
+.client-logo-slider-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 80px;
+}
+
+.client-swiper-row1,
+.client-swiper-row2 {
+  width: 100%;
+  overflow: hidden;
+}
+
+.client-swiper-row1 .swiper-wrapper,
+.client-swiper-row2 .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.client-swiper-row1 .swiper-slide,
+.client-swiper-row2 .swiper-slide {
+  height: auto;
+}
+
+.client-swiper-row1 .swiper-slide img,
+.client-swiper-row2 .swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* --- gib (goods-intro-banner) inner layout --- */
@@ -6004,17 +6027,15 @@ body.is-preload #banner p {
 
 /* Responsive: 1920px fluid */
 @media (max-width: 1920px) {
-  #goods .goods-client-banner {
-    padding: 5.208vw 10.78125vw 4.166vw;
+  .gcb-text {
+    padding: 5.208vw 10.78125vw 3.125vw;
   }
 
-  #goods .goods-client-banner .gib-inner {
-    row-gap: 3.125vw;
+  .client-logo-slider-wrap {
+    gap: 1.25vw;
+    padding-bottom: 4.166vw;
   }
 
-  .client-logo-slider-placeholder {
-    min-height: 13.541vw;
-  }
 
   .gib-inner {
     padding: 4.6875vw 10.78125vw 4.166vw;
@@ -6075,17 +6096,14 @@ body.is-preload #banner p {
     height: auto;
   }
 
-  #goods .goods-client-banner {
-    padding: 60px 40px;
+  .gcb-text {
+    padding: 60px 40px 40px;
   }
 
-  #goods .goods-client-banner .gib-inner {
-    gap: 40px;
+  .client-logo-slider-wrap {
+    padding-bottom: 60px;
   }
 
-  .client-logo-slider-placeholder {
-    min-height: 200px;
-  }
 
   .gib-inner {
     position: relative;
@@ -6126,17 +6144,14 @@ body.is-preload #banner p {
 
 /* Responsive: 480px */
 @media screen and (max-width: 480px) {
-  #goods .goods-client-banner {
-    padding: 40px 21px;
+  .gcb-text {
+    padding: 40px 21px 28px;
   }
 
-  #goods .goods-client-banner .gib-inner {
-    gap: 28px;
+  .client-logo-slider-wrap {
+    padding-bottom: 40px;
   }
 
-  .client-logo-slider-placeholder {
-    min-height: 160px;
-  }
 
   .gib-inner {
     gap: 28px;
