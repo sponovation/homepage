@@ -7472,4 +7472,132 @@ body.is-preload #banner p {
   }
 }
 
+/* =====================================================
+   Section 03 - OUR WORK
+   ===================================================== */
+#goods .goods-ourwork-banner {
+  background: #111111;
+  width: 100%;
+  color: #ffffff;
+  padding: 100px 207px 120px;
+  box-sizing: border-box;
+}
+
+#goods .gow-inner {
+  max-width: 1506px;
+  margin: 0 auto;
+}
+
+#goods .gow-title {
+  text-align: center;
+  color: #F6C443;
+  font-size: 60px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+  font-style: normal;
+}
+
+#goods .gow-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+#goods .gow-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+#goods .gow-item-image {
+  width: 100%;
+  padding-top: 66.15%;
+  border-radius: 15px;
+  background: #ffffff center / cover no-repeat;
+  flex-shrink: 0;
+}
+
+#goods .gow-item-text {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.5;
+}
+
+@media (max-width: 1920px) {
+  #goods .goods-ourwork-banner {
+    padding: 5.2083333333vw 10.78125vw 6.25vw;
+  }
+
+  #goods .gow-title {
+    font-size: 3.125vw;
+    margin-bottom: 3.125vw;
+  }
+
+  #goods .gow-items {
+    gap: 1.4583333333vw;
+  }
+
+  #goods .gow-item-image {
+    border-radius: 0.78125vw;
+  }
+
+  #goods .gow-item-text {
+    font-size: 0.9375vw;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #goods .goods-ourwork-banner {
+    padding: 60px 40px 80px;
+  }
+
+  #goods .gow-title {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  #goods .gow-item-text {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #goods .goods-ourwork-banner {
+    padding: 50px 24px 60px;
+  }
+
+  #goods .gow-title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  #goods .gow-items {
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #goods .goods-ourwork-banner {
+    padding: 40px 16px 50px;
+  }
+
+  #goods .gow-title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  #goods .gow-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  #goods .gow-item-text {
+    font-size: 12px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
