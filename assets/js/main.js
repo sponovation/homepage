@@ -10,15 +10,32 @@
     $header = $("#header"),
     $banner = $("#banner");
 
-  // 브라우저 언어 감지 후 일치하는 언어 index.html로 이동
-  var userLang = navigator.language || navigator.userLanguage;
+  // 브라우저 언어 기반 자동 이동 (SEO 친화 버전)
+  // - 한국어 홈(루트)에서만 동작: 깊은 페이지/크롤러까지 강제 이동시키지 않음
+  //   → 영문 하위 페이지도 검색엔진에 정상 인덱싱되도록 hreflang 신호와 충돌 방지
+  // - 사용자가 언어를 직접 선택하면 이후 자동 이동 비활성화(세션 기억)
+  var userLang = (navigator.language || navigator.userLanguage || "").toLowerCase();
+  var path = window.location.pathname;
+  var isKoreanHome = path === "/" || path === "/index.html";
+  var manualLang = false;
+  try {
+    manualLang = window.sessionStorage.getItem("spvLang");
+  } catch (e) {}
 
-  // ko로 시작하지 않는 경우 영문 페이지로 이동 (ko, ko-KR, ko-kr 모두 한국어로 인식)
-  if (!userLang.toLowerCase().startsWith("ko")) {
-    if (!window.location.pathname.includes("html/en")) {
-      window.location.href = "/html/en/index.html";
-    }
+  if (!manualLang && isKoreanHome && !userLang.startsWith("ko")) {
+    window.location.replace("/html/en/index.html");
   }
+
+  // 언어 전환 링크 클릭 시 '수동 선택'으로 기록 → 이후 자동 이동 안 함(튕김 방지)
+  $(document).on("click", "a", function () {
+    var $a = $(this);
+    var text = $a.text().trim();
+    if ($a.hasClass("language-link") || text === "English" || text === "한국어") {
+      try {
+        window.sessionStorage.setItem("spvLang", "1");
+      } catch (e) {}
+    }
+  });
 
   // Breakpoints.
   breakpoints({
